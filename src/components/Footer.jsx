@@ -6,9 +6,11 @@ import { FEATURED_WORK, SERVICES, QUICK_LINKS, SOCIALS, BADGES, CONTACT, TAGLINE
 export default function Footer() {
   const { pathname } = useLocation()
 
-  const handleQuickLinkClick = (to) => {
-    if (to === pathname) {
-      window.scrollTo(0, 0)
+  const scrollToTopIfCurrent = (to) => {
+    const targetPath = typeof to === 'string' ? to.split(/[?#]/)[0] : to?.pathname
+    const normalize = (path) => path?.replace(/\/+$/, '') || '/'
+    if (normalize(targetPath) === normalize(pathname)) {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
     }
   }
 
@@ -17,7 +19,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[1360px] px-8">
         <div className="flex items-start justify-between gap-10 border-b border-white/10 px-10 py-16 max-lg:flex-col max-lg:px-0">
           <div>
-            <Link to="/" aria-label="Pentarix home">
+            <Link to="/" aria-label="Pentarix home" onClick={() => scrollToTopIfCurrent('/')}>
               <Logo variant="light" height={34} />
             </Link>
             <p className="mt-5 max-w-[230px] leading-[1.7]">{TAGLINE}</p>
@@ -41,7 +43,7 @@ export default function Footer() {
             <ul className="grid gap-3.5">
               {FEATURED_WORK.map((item) => (
                 <li key={item.label}>
-                  <Link className="transition-colors hover:text-[#ff6a00]" to={item.to}>{item.label}</Link>
+                  <Link className="transition-colors hover:text-[#ff6a00]" to={item.to} onClick={() => scrollToTopIfCurrent(item.to)}>{item.label}</Link>
                 </li>
               ))}
             </ul>
@@ -52,7 +54,7 @@ export default function Footer() {
             <ul className="grid gap-3.5">
               {SERVICES.map((item) => (
                 <li key={item.label}>
-                  <Link className="transition-colors hover:text-[#ff6a00]" to={item.to}>{item.label}</Link>
+                  <Link className="transition-colors hover:text-[#ff6a00]" to={item.to} onClick={() => scrollToTopIfCurrent(item.to)}>{item.label}</Link>
                 </li>
               ))}
             </ul>
@@ -66,7 +68,7 @@ export default function Footer() {
                   <Link
                     className="transition-colors hover:text-[#ff6a00]"
                     to={item.to}
-                    onClick={() => handleQuickLinkClick(item.to)}
+                    onClick={() => scrollToTopIfCurrent(item.to)}
                   >
                     {item.label}
                   </Link>
@@ -113,7 +115,7 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} Pentarix. All rights reserved.</p>
           <div className="flex gap-8 max-sm:gap-4">
             {LEGAL_LINKS.map((l) => (
-              <Link className="hover:text-[#ff6a00]" key={l.to} to={l.to}>{l.label}</Link>
+              <Link className="hover:text-[#ff6a00]" key={l.to} to={l.to} onClick={() => scrollToTopIfCurrent(l.to)}>{l.label}</Link>
             ))}
           </div>
         </div>

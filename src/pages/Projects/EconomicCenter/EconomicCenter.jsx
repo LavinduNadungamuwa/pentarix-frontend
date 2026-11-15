@@ -1,48 +1,15 @@
 import { Link } from 'react-router-dom'
-import Hero from '../../components/Hero'
-import Button from '../../components/Button'
-import RichText from '../../components/RichText'
-import { ArrowRight, Check } from '../../components/Icons'
+import Hero from '../../../components/Hero'
+import Button from '../../../components/Button'
+import RichText from '../../../components/RichText'
+import { ArrowRight, Check } from '../../../components/Icons'
+import economicImage from '../../../assets/images/projects/economic.jpg'
 import { hero, overview, meta, featuresIntro, groups, audience, impact, more, cta } from './economicCenterData'
-
-function DashboardMock() {
-  return (
-    <div className="relative grid place-items-center overflow-hidden rounded-[28px] bg-[linear-gradient(145deg,#fff3ea,#fff_55%,#ffe6d3)] p-8 max-sm:p-5" aria-hidden="true">
-      <div className="w-full max-w-[440px] rounded-[18px] border-[8px] border-[#202329] bg-[#171a1f] p-2 shadow-[0_18px_36px_rgba(0,0,0,.24)]">
-        <div className="rounded-lg bg-[#111b27] p-3 text-white">
-          <div className="mb-3 flex items-center justify-between text-[12px] font-semibold">
-            <span className="flex items-center gap-1.5"><i className="size-1.5 rounded-full bg-[#ff6a00]" /> Economic Center Dashboard</span>
-            <span className="text-white/40">â€¢â€¢â€¢</span>
-          </div>
-          <div className="grid grid-cols-3 gap-2">
-            {[['Tickets', '1,284'], ['Tenants', '96'], ['Invoices', '342']].map(([l, v]) => (
-              <div key={l} className="rounded bg-[#182534] p-2"><small className="text-[6px] text-white/50">{l}</small><b className="block text-[14px] leading-none text-[#ff8c25]">{v}</b></div>
-            ))}
-          </div>
-          <div className="mt-2 grid grid-cols-[1.5fr_.8fr] gap-2">
-            <div className="flex h-[74px] items-end gap-1 rounded bg-[#182534] p-2">
-              {[35, 60, 44, 85, 55, 73, 95, 61, 78, 50].map((h, i) => <i key={i} className="flex-1 rounded-t bg-[#ff6a00]" style={{ height: `${h}%` }} />)}
-            </div>
-            <div className="grid place-items-center rounded bg-[#182534] p-2">
-              <i className="size-10 rounded-full border-[5px] border-[#35b6ce] border-r-[#ff6a00] border-b-[#ff6a00]" />
-              <span className="mt-1 text-[5px] text-white/50">Revenue split</span>
-            </div>
-          </div>
-          <div className="mt-2 grid gap-1">
-            {['Tomato â€” Rs. 240', 'Carrot â€” Rs. 180', 'Banana â€” Rs. 150'].map((r) => (
-              <div key={r} className="flex items-center justify-between rounded bg-[#182534] px-2 py-1 text-[6px] text-white/70"><span>{r}</span><i className="h-1 w-8 rounded bg-[#ff6a00]/70" /></div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
 
 export default function EconomicCenter() {
   return (
     <main className="overflow-x-clip pt-[72px]">
-      <Hero {...hero} aside={<DashboardMock />} />
+      <Hero {...hero} contentClassName="max-w-[1100px] grid-cols-[1.8fr_1fr]" titleClassName="max-w-[900px]" aside={<div className="overflow-hidden rounded-[28px] shadow-[0_18px_36px_rgba(0,0,0,.16)]"><img src={economicImage} alt="Economic Center Management System" className="aspect-[4/3] w-full object-cover" /></div>} />
 
       {/* Overview */}
       <section className="border-t border-[#f0f0ee] py-16 max-sm:py-12">
@@ -75,7 +42,7 @@ export default function EconomicCenter() {
       <section className="bg-[#f8f8f8] py-24 max-sm:py-16">
         <div className="mx-auto max-w-[1440px] max-lg:px-6 max-sm:px-4">
           <div className="mx-auto max-w-[760px] text-center">
-            <span className="text-[8px] font-bold uppercase tracking-[.18em] text-[#ff6a00]">{featuresIntro.eyebrow}</span>
+            <span className="text-[10px] font-bold uppercase tracking-[.18em] text-[#ff6a00]">{featuresIntro.eyebrow}</span>
             <h2 className="mt-3 text-[clamp(22px,2.5vw,32px)] font-semibold tracking-[-.02em] text-[#222]"><RichText text={featuresIntro.title} /></h2>
             <p className="mx-auto mt-2 max-w-[560px] text-[12px] leading-[1.7] text-[#9a9a9a]">{featuresIntro.text}</p>
           </div>
@@ -83,27 +50,24 @@ export default function EconomicCenter() {
           <div className="mt-14 grid gap-14 max-sm:mt-10 max-sm:gap-10">
             {groups.map((g, gi) => (
               <div key={g.id}>
-                <div className="mb-6 flex items-end justify-between gap-4 max-sm:flex-col max-sm:items-start">
-                  <div className="flex items-center gap-3">
-                    <b className="grid size-8 place-items-center rounded-full bg-[#202124] text-[8px] text-white">0{gi + 1}</b>
+                <div className="mb-6 flex items-start gap-3">
+                    <b className="grid size-8 place-items-center rounded-full bg-[#202124] text-[10px] text-white">0{gi + 1}</b>
+                  <div>
                     <h3 className="text-[18px] font-semibold text-[#202124]">{g.title}</h3>
+                    <p className="mt-1 max-w-[560px] text-[13px] leading-[1.6] text-[#9a9a9a]">{g.text}</p>
                   </div>
-                  <p className="max-w-[420px] text-[11px] leading-[1.6] text-[#9a9a9a]">{g.text}</p>
                 </div>
                 <div className="grid grid-cols-3 gap-5 max-lg:grid-cols-2 max-sm:grid-cols-1">
-                  {g.features.map(({ Icon, title, text }, i) => {
-                    const dark = gi === 1 && i === 0
-                    return (
-                      <article
-                        key={title}
-                        className={`rounded-[24px] p-7 transition-[transform,box-shadow] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(20,24,30,0.12)] hover:ring-1 hover:ring-[#ff6a00] motion-reduce:transform-none motion-reduce:transition-none max-sm:p-5 ${dark ? 'bg-[#191919] text-white' : 'border border-[#efefea] bg-white shadow-[0_8px_30px_rgba(0,0,0,.04)]'}`}
-                      >
-                        <span className={`mb-4 inline-grid size-9 place-items-center rounded-xl text-[#ff6a00] ${dark ? 'bg-[#ff6a00]/15' : 'bg-[#fff0e6]'}`}><Icon size={17} /></span>
-                        <h4 className={`mb-2 text-[15px] font-semibold ${dark ? 'text-white' : 'text-[#202124]'}`}>{title}</h4>
-                        <p className={`text-[11px] leading-[1.7] ${dark ? 'text-white/55' : 'text-[#92969e]'}`}>{text}</p>
-                      </article>
-                    )
-                  })}
+                  {g.features.map(({ Icon, title, text }) => (
+                    <article
+                      key={title}
+                      className="rounded-[24px] border border-[#efefea] bg-white p-7 shadow-[0_8px_30px_rgba(0,0,0,.04)] transition-[transform,box-shadow] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(20,24,30,0.12)] hover:ring-1 hover:ring-[#ff6a00] motion-reduce:transform-none motion-reduce:transition-none max-sm:p-5"
+                    >
+                      <span className="mb-4 inline-grid size-9 place-items-center rounded-xl bg-[#fff0e6] text-[#ff6a00]"><Icon size={17} /></span>
+                      <h4 className="mb-2 text-[15px] font-semibold text-[#202124]">{title}</h4>
+                      <p className="text-[11px] leading-[1.7] text-[#92969e]">{text}</p>
+                    </article>
+                  ))}
                 </div>
               </div>
             ))}
@@ -157,10 +121,17 @@ export default function EconomicCenter() {
           <h2 className="mb-8 text-[clamp(22px,2vw,28px)] font-semibold tracking-[-.02em] text-[#27282b]">{more.title}</h2>
           <div className="grid grid-cols-3 gap-5 max-lg:grid-cols-1">
             {more.items.map((m) => (
-              <Link key={m.title} to={m.to} className="group rounded-[24px] border border-[#efefea] bg-white p-7 shadow-[0_8px_30px_rgba(0,0,0,.04)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(20,24,30,0.12)] hover:ring-1 hover:ring-[#ff6a00] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff6a00] focus-visible:ring-offset-2 motion-reduce:transform-none motion-reduce:transition-none">
-                <span className="rounded-full bg-[#f5f5f3] px-2.5 py-1 text-[8px] font-medium text-[#555]">{m.tag}</span>
-                <h3 className="my-4 text-[16px] font-semibold text-[#202124]">{m.title}</h3>
-                <span className="grid size-9 place-items-center rounded-full bg-[#ff6a00] text-white transition group-hover:translate-x-1"><ArrowRight size={15} /></span>
+              <Link
+                key={m.title}
+                to={m.to}
+                className="group relative top-0 flex min-h-[240px] flex-col items-start rounded-[24px] border border-[#efefea] bg-cover bg-center p-7 text-white shadow-[0_8px_30px_rgba(0,0,0,.12)] transition-[top,box-shadow,border-color] duration-200 hover:-top-1 hover:shadow-[0_16px_36px_rgba(20,24,30,0.2)] hover:ring-1 hover:ring-[#ff6a00] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff6a00] focus-visible:ring-offset-2 motion-reduce:transition-none"
+                style={{ backgroundImage: `linear-gradient(180deg, transparent 42%, rgba(0,0,0,.32) 66%, rgba(0,0,0,.94) 100%), url("${m.image}")`, backgroundPosition: m.imagePosition || 'center' }}
+              >
+                <span className="rounded-full bg-black/45 px-2.5 py-1 text-[8px] font-medium text-white backdrop-blur-sm">{m.tag}</span>
+                <div className="mt-auto flex w-full items-end justify-between gap-3 pt-16">
+                  <h3 className="text-[18px] font-semibold text-white">{m.title}</h3>
+                  <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#ff6a00] text-white transition group-hover:translate-x-1"><ArrowRight size={15} /></span>
+                </div>
               </Link>
             ))}
           </div>

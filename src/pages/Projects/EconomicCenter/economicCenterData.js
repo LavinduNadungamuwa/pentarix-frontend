@@ -1,12 +1,16 @@
 import {
   ShoppingBag, Building, FileText, Globe, Monitor,
   Truck, FileCheck, Users, Database, GridIcon,
-} from '../../components/Icons'
+} from '../../../components/Icons'
+import distributionImage from '../../../assets/images/projects/dashboard.png'
+import hrmsImage from '../../../assets/images/projects/hrms.png'
+import chatbotImage from '../../../assets/images/projects/dms.png'
 
 export const hero = {
   eyebrow: 'Public Sector · Enterprise Software',
-  title: 'Digitizing Market Operations.\n{Simplifying Management.}',
-  description: 'Empowering Growth. A comprehensive Economic Center Management System that brings public information, ticketing and finance into one digital environment.',
+  title: 'Economic Center Management System',
+  subtitle: 'Digitizing Market Operations. Simplifying Management. Empowering Growth.',
+  description: 'A comprehensive platform bringing public information, ticketing, and finance into one digital environment.',
   actions: [
     { label: 'Discuss Your Project', to: '/contact' },
     { label: 'All Projects', to: '/our-work', variant: 'outline-dark' },
@@ -17,7 +21,7 @@ export const overview = {
   title: 'Transforming traditional\nmarket operations.',
   paragraphs: [
     {
-      before: 'Pentarix Labs developed a comprehensive Economic Center Management System to transform traditional market operations through modern digital technologies. The platform combines a ',
+      before: 'Pentarix Labs developed a comprehensive Economic Center Management System to transform traditional market operations through modern digital technology. The platform combines a ',
       strong: 'public-facing website with an integrated management system',
       after: ', enabling efficient handling of daily operations, financial activities, ticketing services, and public information from one centralized digital environment.',
     },
@@ -92,9 +96,9 @@ export const impact = {
 export const more = {
   title: 'Explore more of our work',
   items: [
-    { title: 'Distribution Agency Management System', tag: 'Distribution & Logistics', to: '/our-work/distribution-system' },
-    { title: 'Advanced Point of Sale (POS) System', tag: 'Retail', to: '/our-work/pos-system' },
-    { title: 'Human Resource Information System', tag: 'Enterprise', to: '/our-work/hris' },
+    { title: 'Human Resource Information System (HRIS)', tag: 'Enterprise', to: '/our-work/hris', image: hrmsImage },
+    { title: 'Distribution Agency Management System', tag: 'Distribution & Logistics', to: '/our-work/distribution-system', image: distributionImage, imagePosition: 'top' },
+    { title: 'AI-Powered Customer Support Chatbot', tag: 'Artificial Intelligence', to: '/our-work/ai-chatbot', image: chatbotImage },
   ],
 }
 
