@@ -31,6 +31,7 @@ import {
   LinkIcon,
   Settings,
 } from '../components/Icons'
+import posImage from '../assets/images/projects/pos.png'
 
 export const NAV_ITEMS = [
   {
@@ -61,6 +62,8 @@ export const NAV_ITEMS = [
       },
       {
         type: 'featured',
+        image: posImage,
+        imageAlt: 'Advanced POS system dashboard',
         title: 'Our Projects & Case Studies',
         desc: "Explore systems we've delivered across enterprise, retail, healthcare and education.",
         cta: 'Explore Projects',
