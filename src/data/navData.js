@@ -41,22 +41,22 @@ export const NAV_ITEMS = [
       {
         heading: 'SOLUTIONS WE DELIVER',
         items: [
-          { label: 'Digital Platforms and Applications',  desc: 'Modern web, mobile, and enterprise apps built for speed, scale, and user experience.', Icon: Monitor,  to: '/services/digital-products'       },
-          { label: 'Emerging & Immersive Technologies',   desc: 'AR, VR, blockchain, and next-generation experiences that transform how teams work.',    Icon: Headset,  to: '/services/emerging-technologies'  },
-          { label: 'Industry-Specific Solutions',         desc: 'Tailored systems for healthcare, education, retail, logistics, and public sector.',      Icon: GridIcon, to: '/services/enterprise-software'   },
-          { label: 'Our Development Principles',          desc: 'Quality-first delivery, clean architecture, and long-term maintainability in every build.', Icon: Cloud, to: '/services/ai-automation'        },
+          { label: 'Digital Platforms and Applications',  desc: 'Modern web, mobile, and enterprise apps built for speed, scale, and user experience.', Icon: Monitor,  to: '/services#digital-platforms'       },
+          { label: 'Emerging & Immersive Technologies',   desc: 'AR, VR, blockchain, and next-generation experiences that transform how teams work.',    Icon: Headset,  to: '/insights'  },
+          { label: 'Industry-Specific Solutions',         desc: 'Tailored systems for healthcare, education, retail, logistics, and public sector.',      Icon: GridIcon, to: '/our-work'   },
+          { label: 'Our Development Principles',          desc: 'Quality-first delivery, clean architecture, and long-term maintainability in every build.', Icon: Cloud, to: '/about'        },
         ],
       },
       {
         heading: 'INDUSTRIES',
         slim: true,
         items: [
-          { label: 'Healthcare',               Icon: Plus,          to: '/services' },
-          { label: 'Education',                Icon: GraduationCap, to: '/services' },
-          { label: 'Retail',                   Icon: ShoppingBag,   to: '/services' },
-          { label: 'Distribution & Logistics', Icon: Truck,         to: '/services' },
-          { label: 'Hospitality',              Icon: Bed,           to: '/services' },
-          { label: 'Public Sector',            Icon: Building,      to: '/services' },
+          { label: 'Healthcare',               Icon: Plus,          to: '/our-work/medical-center-system' },
+          { label: 'Education',                Icon: GraduationCap, to: '/our-work/school-management' },
+          { label: 'Retail',                   Icon: ShoppingBag,   to: '/our-work/pos-system' },
+          { label: 'Distribution & Logistics', Icon: Truck,         to: '/our-work/distribution-system' },
+          { label: 'Hospitality',              Icon: Bed,           to: '/our-work/hotel-booking' },
+          { label: 'Public Sector',            Icon: Building,      to: '/our-work/economic-center-system' },
         ],
       },
       {

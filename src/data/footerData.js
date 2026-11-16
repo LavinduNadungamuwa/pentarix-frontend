@@ -32,10 +32,10 @@ export const FEATURED_WORK = [
 ]
 
 export const SERVICES = [
-  { label: 'Digital Products', to: '/services/digital-products' },
-  { label: 'Enterprise Software', to: '/services/enterprise-software' },
-  { label: 'AI & Automation', to: '/services/ai-automation' },
-  { label: 'Emerging Technologies', to: '/services/emerging-technologies' },
+  { label: 'Digital Products', to: '/services#digital-platforms' },
+  { label: 'Enterprise Software', to: '/our-work' },
+  { label: 'AI & Automation', to: '/research' },
+  { label: 'Emerging Technologies', to: '/insights' },
 ]
 
 export const QUICK_LINKS = [

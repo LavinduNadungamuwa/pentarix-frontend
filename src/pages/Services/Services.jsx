@@ -29,7 +29,9 @@ export default function Services() {
       {/* Service offerings */}
       <section className="bg-[#f8f8f8] py-16 max-sm:py-12">
         <div className="mx-auto grid max-w-[1280px] grid-cols-12 gap-5 max-lg:px-6 max-sm:grid-cols-1 max-sm:px-4">
-          <article className="relative col-span-7 overflow-hidden rounded-[24px] border border-[#efefea] bg-white p-8 shadow-[0_8px_24px_rgba(0,0,0,.035)] transition-[transform,box-shadow] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(20,24,30,0.12)] hover:ring-1 hover:ring-[#ff6a00] motion-reduce:transform-none motion-reduce:transition-none max-lg:col-span-12 max-sm:p-6">
+          <article
+            id="digital-platforms"
+            className="scroll-mt-24 relative col-span-7 overflow-hidden rounded-[24px] border border-[#efefea] bg-white p-8 shadow-[0_8px_24px_rgba(0,0,0,.035)] transition-[transform,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(20,24,30,0.12)] motion-reduce:transform-none motion-reduce:transition-none max-lg:col-span-12 max-sm:p-6">
             <span className="mb-4 inline-grid size-9 place-items-center rounded-lg bg-[#fff0e6] text-[#ff6a00]">
               <img src={digital.icon} alt="" aria-hidden="true" className="size-5 object-contain" />
             </span>
