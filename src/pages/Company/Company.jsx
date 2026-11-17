@@ -5,9 +5,9 @@ import RichText from '../../components/RichText'
 import Cta from '../../components/Cta'
 import suslLogo from '../../assets/logos/susl.png'
 import { ArrowRight } from '../../components/Icons'
-import { hero, legacy, missionVision, pillars, leadership, academia, cta } from './aboutData'
+import { hero, legacy, missionVision, pillars, leadership, academia, cta } from './companyData'
 
-export default function About() {
+export default function Company() {
   return (
     <main className="overflow-x-clip bg-white pt-[72px] text-[#202124]">
       <Hero
@@ -147,7 +147,7 @@ export default function About() {
         </div>
       </section>
 
-      <Cta data={cta} variant="about" />
+      <Cta data={cta} variant="company" />
     </main>
   )
 }

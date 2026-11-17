@@ -38,6 +38,7 @@ export default function Hero({
   id,
 }) {
   const isHome = variant === 'home'
+  const isCentered = variant === 'centered'
 
   return (
     <section
@@ -60,13 +61,13 @@ export default function Hero({
       {isHome && <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.55)_55%,rgba(0,0,0,.25)),radial-gradient(ellipse_at_80%_30%,rgba(255,106,0,.18),transparent_55%)]" />}
 
       <div className={`relative ${pageContainer} ${isHome ? 'pb-0 pt-8' : ''} ${aside ? 'grid grid-cols-[1.3fr_1fr] items-center gap-16 max-lg:grid-cols-1' : ''} ${contentClassName}`}>
-        <div className="max-w-[896px]">
+        <div className={isCentered ? 'w-full' : 'max-w-[896px]'}>
           {eyebrow && <span className="font-medium uppercase tracking-[.3em] text-[#ff6a00]">{eyebrow}</span>}
-          <h1 className={`max-w-[680px] font-bold leading-[1.1] text-[#000000] ${isHome ? 'mt-5 mb-6 max-w-[780px] text-[clamp(48px,6vw,96px)] leading-[1.05] text-white' : 'my-3 mb-4 text-[clamp(30px,4.67vw,72px)]'} ${titleClassName}`}>
+          <h1 className={`${isCentered ? 'mx-auto max-w-[1000px] text-center' : 'max-w-[680px]'} font-bold leading-[1.1] text-[#000000] ${isHome ? 'mt-5 mb-6 max-w-[780px] text-[clamp(48px,6vw,96px)] leading-[1.05] text-white' : isCentered ? 'mb-6 mt-6 text-[clamp(32px,4vw,60px)]' : 'my-3 mb-4 text-[clamp(30px,4.67vw,72px)]'} ${titleClassName}`}>
             <RichText text={title} />
           </h1>
           {subtitle && <p className={`mb-4 max-w-[680px] font-semibold leading-[1.35] ${isHome ? 'text-[clamp(20px,2.4vw,32px)] text-white/90' : 'text-[clamp(20px,2.4vw,32px)] text-[#34363a]'}`}><RichText text={subtitle} /></p>}
-          {description && <p className={`max-w-[540px] leading-[1.75] ${isHome ? 'text-[clamp(15px,1.1vw,18px)] text-white/80' : 'text-[clamp(15px,1.1vw,18px)] text-[#9a9a9a]'}`}>{description}</p>}
+          {description && <p className={`${isCentered ? 'mx-auto max-w-[760px] text-center' : 'max-w-[540px]'} leading-[1.75] ${isHome ? 'text-[clamp(15px,1.1vw,18px)] text-white/80' : 'text-[clamp(15px,1.1vw,18px)] text-[#9a9a9a]'}`}>{description}</p>}
 
           {actions.length > 0 && (
             <div className="mt-8 flex flex-wrap items-center gap-3.5">

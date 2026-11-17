@@ -1,6 +1,13 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from '../src/pages/Home/Home'
-import About from '../src/pages/About/About'
+import Company from '../src/pages/Company/Company'
+import About from '../src/pages/Company/About/About'
+import Minds from '../src/pages/Company/Minds/Minds'
+import WhatDrives from '../src/pages/Company/WhatDrives/WhatDrives'
+import Quality from '../src/pages/Company/Quality/Quality'
+import WhyChoose from '../src/pages/Company/WhyChoose/WhyChoose'
+import Partners from '../src/pages/Company/Partners/Partners'
+import Technologies from '../src/pages/Company/Technologies/Technologies'
 import Services from '../src/pages/Services/Services'
 import Healthcare from '../src/pages/Services/Healthcare/Healthcare'
 import Education from '../src/pages/Services/Education/Education'
@@ -44,7 +51,14 @@ export default function AppRoutes() {
   return (
     <Routes>
       <Route path="/"           element={<Home />} />
-      <Route path="/about"      element={<About />} />
+      <Route path="/company"      element={<Company />} />
+      <Route path="/company/about" element={<About />} />
+      <Route path="/company/minds" element={<Minds />} />
+      <Route path="/company/what-drives-us-forward" element={<WhatDrives />} />
+      <Route path="/company/quality" element={<Quality />} />
+      <Route path="/company/why-choose" element={<WhyChoose />} />
+      <Route path="/company/partners" element={<Partners />} />
+      <Route path="/company/technologies" element={<Technologies />} />
       <Route path="/services"   element={<Services />} />
       <Route path="/services/healthcare" element={<Healthcare />} />
       <Route path="/services/education" element={<Education />} />

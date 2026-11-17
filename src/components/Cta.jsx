@@ -28,7 +28,7 @@ const layouts = {
     actions: 'justify-center',
     buttonSize: 'lg',
   },
-  about: {
+  company: {
   section: 'py-24 max-sm:py-16',
   content: pageContainer,
   card: 'mx-auto w-full rounded-[28px] bg-[#191919] px-8 py-[72px] text-center text-white max-sm:px-5 max-sm:py-14',
@@ -86,7 +86,7 @@ export default function Cta({ data, variant = 'home' }) {
       <div className={layout.content}>
         <div
           className={`${cardClassName || ''}${data.decoration ? ' relative isolate overflow-hidden' : ''}`}
-          style={variant === 'about' ? { background: 'radial-gradient(ellipse at top right, rgba(70, 39, 20, .35), transparent 45%), #191919' } : undefined}
+          style={variant === 'company' ? { background: 'radial-gradient(ellipse at top right, rgba(70, 39, 20, .35), transparent 45%), #191919' } : undefined}
         >
           {data.decoration && <img src={data.decoration} alt="" className="pointer-events-none absolute right-10 top-1/2 -z-10 w-[160px] -translate-y-1/2 opacity-10 max-md:right-4 max-md:w-[110px]" loading="lazy" />}
           {data.eyebrow && <p className="mb-5 text-[11px] font-bold uppercase tracking-[.22em] text-[#ff6a00]">{data.eyebrow}</p>}

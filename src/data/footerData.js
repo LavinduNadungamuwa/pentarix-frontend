@@ -42,7 +42,7 @@ export const QUICK_LINKS = [
   { label: 'Home', to: '/' },
   { label: 'Services', to: '/services' },
   { label: 'Our Work', to: '/our-work' },
-  { label: 'About', to: '/about' },
+  { label: 'Company', to: '/company' },
   { label: 'Insights', to: '/insights' },
   { label: 'Careers', to: '/careers' },
   { label: 'Contact', to: '/contact' },

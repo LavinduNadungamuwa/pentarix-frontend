@@ -1,13 +1,13 @@
-import securityIcon from '../../assets/icons/about/security.png'
-import engineeringIcon from '../../assets/icons/about/engineering.png'
-import qaIcon from '../../assets/icons/about/qa.png'
-import innovationIcon from '../../assets/icons/about/innovation.png'
-import radicalIcon from '../../assets/icons/about/radical.png'
-import globeIcon from '../../assets/icons/about/globe.png'
-import missionIcon from '../../assets/icons/about/mission.png'
-import visionIcon from '../../assets/icons/about/vision.png'
-import officeImage from '../../assets/images/about/image1.png'
-import academiaImage from '../../assets/images/about/academia.png'
+import securityIcon from '../../assets/icons/company/security.png'
+import engineeringIcon from '../../assets/icons/company/engineering.png'
+import qaIcon from '../../assets/icons/company/qa.png'
+import innovationIcon from '../../assets/icons/company/innovation.png'
+import radicalIcon from '../../assets/icons/company/radical.png'
+import globeIcon from '../../assets/icons/company/globe.png'
+import missionIcon from '../../assets/icons/company/mission.png'
+import visionIcon from '../../assets/icons/company/vision.png'
+import officeImage from '../../assets/images/company/image1.png'
+import academiaImage from '../../assets/images/company/academia.png'
 
 export const hero = {
   eyebrow: 'About Pentarix',
