@@ -63,9 +63,9 @@ export const digitalCard = {
 }
 
 export const smallCards = [
-  { id: 'enterprise', icon: enterpriseIcon, title: 'Enterprise Systems', text: 'Robust, secure backbones for complex global organizations.', to: '/services', image: enterpriseSystemsImage },
-  { id: 'ai', icon: aiIcon, title: 'AI & Automation', text: 'Intelligent algorithms that optimize processes and predict trends.', to: '/services', image: aiAutomationImage },
-  { id: 'industry', icon: industryIcon, title: 'Industry Solutions', text: 'Vertical-specific tools for Retail, FinTech, and Logistics sectors.', to: '/services' },
+  { id: 'enterprise', icon: enterpriseIcon, title: 'Enterprise Systems', text: 'Robust, secure backbones for complex global organizations.', to: '/our-work', image: enterpriseSystemsImage },
+  { id: 'ai', icon: aiIcon, title: 'AI & Automation', text: 'Intelligent algorithms that optimize processes and predict trends.', to: '/research', image: aiAutomationImage },
+  { id: 'industry', icon: industryIcon, title: 'Industry Solutions', text: 'Vertical-specific tools for Retail, FinTech, and Logistics sectors.', to: '/services/industry-specific' },
 ]
 
 export const cloudCard = {

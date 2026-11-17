@@ -32,10 +32,10 @@ export const FEATURED_WORK = [
 ]
 
 export const SERVICES = [
-  { label: 'Digital Products', to: '/services#digital-platforms' },
+  { label: 'Digital Products', to: '/services/digital-platforms' },
   { label: 'Enterprise Software', to: '/our-work' },
   { label: 'AI & Automation', to: '/research' },
-  { label: 'Emerging Technologies', to: '/insights' },
+  { label: 'Emerging Technologies', to: '/services/emerging' },
 ]
 
 export const QUICK_LINKS = [
@@ -62,3 +62,4 @@ export const BADGES = [
   { src: s508Img,   alt: 'Section 508 Compliant'  },
   { src: gdprImg,   alt: 'GDPR Compliant'         },
 ]
+

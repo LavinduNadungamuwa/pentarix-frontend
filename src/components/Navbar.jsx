@@ -48,7 +48,7 @@ export default function Navbar() {
   // navbar use the supplied dark palette. Scrolled pages use the light palette.
   const menuDark = !solid
   const panelClass = menuDark
-    ? 'border-[#303034] bg-[#19191b] text-white shadow-2xl'
+    ? 'border-[#303034]/80 bg-[#19191b]/80 text-white shadow-2xl backdrop-blur-xl'
     : 'border-[#e5e4e7] bg-white text-black shadow-xl'
   const hoverClass = menuDark ? 'hover:bg-[#242426]' : 'hover:bg-[#f7f7f4]'
   const titleClass = menuDark ? 'text-white' : 'text-black'
@@ -164,37 +164,37 @@ export default function Navbar() {
             {item.columns.map((col, ci) =>
               col.type === 'featured' ? (
                 <div
-  key={ci}
-  className={`flex flex-col rounded-2xl p-4 ${ci > 0 ? 'ml-4 max-md:ml-0 max-md:mt-6' : ''} ${menuDark ? 'bg-[#202022]' : 'bg-[#f0f0f0]'}`}
->
-  {/* Image fills whatever height is left after the text */}
-  <div className="relative min-h-[160px] flex-1 overflow-hidden rounded-xl">
-    {col.image ? (
-      <img
-        src={col.image}
-        alt={col.imageAlt || ''}
-        className="absolute inset-0 h-full w-full object-cover object-left-top"
-      />
-    ) : (
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,#ff6a00,#321300_75%)]" />
-    )}
-  </div>
+                key={ci}
+                className={`flex flex-col rounded-2xl p-4 ${ci > 0 ? 'ml-4 max-md:ml-0 max-md:mt-6' : ''} ${menuDark ? 'bg-[#202022]' : 'bg-[#f0f0f0]'}`}
+              >
+                {/* Image fills whatever height is left after the text */}
+                <div className="relative min-h-[160px] flex-1 overflow-hidden rounded-xl">
+                  {col.image ? (
+                    <img
+                      src={col.image}
+                      alt={col.imageAlt || ''}
+                      className="absolute inset-0 h-full w-full object-cover object-left-top"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-[linear-gradient(135deg,#ff6a00,#321300_75%)]" />
+                  )}
+                </div>
 
-  {/* Text block */}
-  <div className="pt-5">
-    <strong className={`block text-[15px] leading-6 ${menuDark ? 'text-[#ff6a00]' : 'text-black'}`}>
-      {col.title}
-    </strong>
-    <p className={`mt-2 text-xs leading-5 ${descClass}`}>{col.desc}</p>
-    <Link
-  to={col.to}
-  onClick={() => scrollToTopIfCurrent(col.to)}
-  className={`mt-5 inline-flex items-center gap-1.5 text-xs font-bold transition-colors hover:text-[#ff6a00] ${menuDark ? 'text-white' : 'text-[#555]'}`}
->
-  {col.cta} <ArrowRight size={13} />
-</Link>
-  </div>
-</div>
+                {/* Text block */}
+                <div className="pt-5">
+                  <strong className={`block text-[15px] leading-6 ${menuDark ? 'text-[#ff6a00]' : 'text-black'}`}>
+                    {col.title}
+                  </strong>
+                  <p className={`mt-2 text-xs leading-5 ${descClass}`}>{col.desc}</p>
+                  <Link
+                to={col.to}
+                onClick={() => scrollToTopIfCurrent(col.to)}
+                className={`mt-5 inline-flex items-center gap-1.5 text-xs font-bold transition-colors hover:text-[#ff6a00] ${menuDark ? 'text-white' : 'text-[#555]'}`}
+              >
+                {col.cta} <ArrowRight size={13} />
+              </Link>
+                </div>
+              </div>
               ) : (
                 <div key={ci} className={`${col.slim ? 'col-span-1' : ''} ${ci > 0 ? 'border-l border-[#353539] pl-8 max-md:border-l-0 max-md:border-t max-md:border-t-[#353539] max-md:pl-0 max-md:pt-6' : ''} ${!menuDark && ci > 0 ? 'border-l-[#d4d4d8] max-md:border-t-[#d4d4d8]' : ''} ${ci === 0 ? 'pr-8 max-md:pr-0' : ci === 1 ? 'px-8 max-md:px-0' : 'pl-8 max-md:pl-0'}`}>
                   {col.heading && (
