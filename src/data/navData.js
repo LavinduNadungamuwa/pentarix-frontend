@@ -67,7 +67,7 @@ export const NAV_ITEMS = [
         title: 'Our Projects & Case Studies',
         desc: "Explore systems we've delivered across enterprise, retail, healthcare and education.",
         cta: 'Explore Projects',
-        to: '/our-work',
+        to: '/insights/case-studies',
       },
     ],
   },
@@ -110,8 +110,8 @@ export const NAV_ITEMS = [
     label: 'Insights',
     to: '/insights',
     children: [
-      { label: 'Case Studies',    desc: 'Real challenges, innovative solutions', Icon: FileText, to: '/insights' },
-      { label: 'Blog & Articles', desc: 'Ideas on AI, RAG and automation',       Icon: BookOpen, to: '/insights' },
+      { label: 'Case Studies',    desc: 'Real challenges, innovative solutions', Icon: FileText, to: '/insights/case-studies' },
+      { label: 'Blogs & Articles', desc: 'Ideas on AI, RAG and automation',       Icon: BookOpen, to: '/insights/blogs' },
     ],
   },
   {

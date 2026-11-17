@@ -95,8 +95,10 @@ export default function Cta({ data, variant = 'home' }) {
           </h2>
           <p className={descriptionClassName}>{data.text}</p>
           <div className={actionsClassName} style={layout.actionsStyle}>
-            {actions.map(({ label, ...button }) => (
-              <Button key={label} size={layout.buttonSize} {...button}>{label}</Button>
+            {actions.map(({ label, icon, ...button }) => (
+              <Button key={label} size={layout.buttonSize} {...button}>
+                <span className="inline-flex items-center gap-2">{label}{icon && <img src={icon} alt="" className="size-5 object-contain" />}</span>
+              </Button>
             ))}
           </div>
         </div>

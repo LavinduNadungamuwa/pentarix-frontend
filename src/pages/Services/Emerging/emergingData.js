@@ -38,7 +38,7 @@ export const cta = {
   text: 'Our team of technologists and strategists are ready to help you validate, prototype, and build your next breakthrough.',
   actions: [
     { label: 'Let’s Talk', to: '/contact' },
-    { label: 'Read Case Studies', to: '/our-work', variant: 'outline-dark' },
+    { label: 'Read Case Studies', to: '/insights/case-studies', variant: 'outline-dark' },
   ],
 }
 

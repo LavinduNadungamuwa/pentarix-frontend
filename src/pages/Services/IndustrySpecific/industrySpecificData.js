@@ -42,7 +42,7 @@ export const cta = {
   text: 'Our specialists are ready to architect a digital solution that fits your industry like a glove.',
   actions: [
     { label: 'Contact Us', to: '/contact' },
-    { label: 'Our Case Studies', to: '/our-work', variant: 'outline-dark' },
+    { label: 'Our Case Studies', to: '/insights/case-studies', variant: 'outline-dark' },
   ],
 }
 

@@ -22,6 +22,8 @@ import Principles from '../src/pages/Services/Principles/Principles'
 import Projects from '../src/pages/Projects/Projects'
 import Research from '../src/pages/Research/Research'
 import Insights from '../src/pages/Insights/Insights'
+import Blogs from '../src/pages/Insights/Blogs/Blogs'
+import CaseStudies from '../src/pages/Insights/CaseStudies/CaseStudies'
 import CareersContact from '../src/pages/CareersContact/CareersContact'
 import EconomicCenter from '../src/pages/Projects/EconomicCenter/EconomicCenter'
 import Hris from '../src/pages/Projects/HRIS/Hris'
@@ -74,6 +76,8 @@ export default function AppRoutes() {
       <Route path="/our-work"   element={<Projects />} />
       <Route path="/research"   element={<Research />} />
       <Route path="/insights" element={<Insights />} />
+      <Route path="/insights/blogs" element={<Blogs />} />
+      <Route path="/insights/case-studies" element={<CaseStudies />} />
       {/* Careers and Contact share the same page */}
       <Route path="/careers"    element={<CareersContact />} />
       <Route path="/contact"    element={<CareersContact />} />

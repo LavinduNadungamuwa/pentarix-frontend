@@ -40,7 +40,7 @@ export const cta = {
   text: 'Ready to architect a digital solution that exceeds expectations? Let’s discuss your project goals today.',
   actions: [
     { label: 'Discuss Your Project', to: '/contact' },
-    { label: 'Our Case Studies', to: '/our-work', variant: 'outline-dark' },
+    { label: 'Our Case Studies', to: '/insights/case-studies', variant: 'outline-dark' },
   ],
 }
 

@@ -6,7 +6,7 @@ export const hero = {
   description: 'Digital solutions that organize patient information, streamline appointments, and support everyday medical center operations with robust, secure infrastructure.',
   actions: [
     { label: 'Discuss Your Requirements', to: '/contact' },
-    { label: 'Our Technology Stack', to: '/insights', variant: 'outline-dark' },
+    { label: 'Our Technology Stack', to: '/company/technologies', variant: 'outline-dark' },
   ],
 }
 

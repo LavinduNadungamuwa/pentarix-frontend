@@ -46,7 +46,7 @@ export const enterprise = {
   icon: enterpriseIcon,
   title: 'Enterprise Systems',
   text: 'Modernizing core business functions with robust ERP, CRM, and bespoke operational software.',
-  button: { label: 'Case Studies', to: '/our-work' },
+  button: { label: 'Case Studies', to: '/insights/case-studies' },
   steps: ['Legacy Modernization', 'Workflow Automation', 'Cloud Migration'],
 }
 

@@ -48,6 +48,6 @@ export const cta = {
   text: 'Ready to transform your vision into a high-impact digital reality? Get in touch with our team of experts today.',
   actions: [
     { label: 'Contact Us', to: '/contact' },
-    { label: 'View Case Studies', to: '/our-work', variant: 'dark', className: '!bg-[#333333] hover:!bg-[#454545]' },
+    { label: 'View Case Studies', to: '/insights/case-studies', variant: 'dark', className: '!bg-[#333333] hover:!bg-[#454545]' },
   ],
 }
