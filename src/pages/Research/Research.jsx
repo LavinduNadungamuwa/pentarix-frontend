@@ -1,3 +1,4 @@
+import { pageContainer as container } from '../../components/pageLayout'
 import Hero from '../../components/Hero'
 import Button from '../../components/Button'
 import RichText from '../../components/RichText'
@@ -15,7 +16,7 @@ export default function Research() {
 
       {/* Research commitment */}
       <section className="border-t border-[#f0f0ee] py-16 max-sm:py-12">
-        <div className="mx-auto grid max-w-[1280px] grid-cols-[.8fr_1.2fr] gap-16 max-lg:px-6 max-lg:grid-cols-1 max-sm:px-4 max-sm:gap-6">
+        <div className={`${container} grid grid-cols-[.8fr_1.2fr] gap-16 max-lg:grid-cols-1 max-sm:gap-6`}>
           <div>
             <h2 className="max-w-[360px] text-[clamp(24px,2.4vw,34px)] font-semibold leading-[1.2] tracking-[-.025em] text-[#242529]">{commitment.title}</h2>
             <i className="mt-5 block h-0.5 w-10 bg-[#ff6a00]" />
@@ -30,7 +31,7 @@ export default function Research() {
 
       {/* ML & DL */}
       <section className="bg-[#f8f8f8] py-24 max-sm:py-16">
-        <div className="mx-auto max-w-[1440px] max-lg:px-6 max-sm:px-4">
+        <div className={container}>
           <div className="grid grid-cols-2 items-center gap-14 max-lg:grid-cols-1 max-sm:gap-8">
             <div className="relative aspect-[1.25] overflow-hidden rounded-[24px] shadow-[0_14px_32px_rgba(0,0,0,.14)] max-sm:aspect-[1.25]">
               <img src={mlImage} alt="Machine learning server racks" className="size-full object-cover" />
@@ -50,7 +51,7 @@ export default function Research() {
             </div>
           </div>
 
-          <div className="mt-[72px] grid grid-cols-12 gap-6 max-sm:grid-cols-1">
+          <div className="mt-[72px] grid grid-cols-12 gap-6">
             <article className="col-span-4 rounded-[32px] border border-[#efefea] bg-white p-12 shadow-[0_8px_30px_rgba(0,0,0,.035)] transition-[transform,box-shadow] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(20,24,30,0.12)] hover:ring-1 hover:ring-[#ff6a00] motion-reduce:transform-none motion-reduce:transition-none max-lg:col-span-12 max-sm:p-6">
               <img src={nlp.Icon} alt="" aria-hidden="true" className="mb-9 size-16 object-contain max-sm:mb-7 max-sm:size-14" />
               <h3 className="text-[28px] font-semibold leading-tight text-[#252629] max-sm:text-[24px]">{nlp.title}</h3>
@@ -76,7 +77,7 @@ export default function Research() {
 
       {/* Efficiency */}
       <section className="py-20 max-sm:py-14">
-        <div className="mx-auto grid max-w-[1280px] grid-cols-2 items-center gap-16 max-lg:px-6 max-lg:grid-cols-1 max-sm:px-4 max-sm:gap-8">
+        <div className={`${container} grid grid-cols-2 items-center gap-16 max-lg:grid-cols-1 max-sm:gap-8`}>
           <div>
             <h2 className="max-w-[440px] text-[clamp(24px,2.6vw,34px)] font-semibold leading-[1.18] tracking-[-.025em] text-[#28292c]"><RichText text={flow.title} /></h2>
             <p className="my-4 mb-7 max-w-[470px] text-[11px] leading-[1.8] text-[#91959d]">{flow.text}</p>
@@ -108,7 +109,7 @@ export default function Research() {
 
       {/* Academia */}
       <section className="bg-[#fffaf6] py-20 text-center max-sm:py-14">
-        <div className="mx-auto max-w-[1440px] max-lg:px-6 max-sm:px-4">
+        <div className={container}>
           <span className="text-[11px] font-bold uppercase tracking-[.17em] text-[#ff6a00]">{academia.eyebrow}</span>
           <h2 className="mx-auto mb-9 mt-2 text-[clamp(22px,2.5vw,32px)] font-semibold tracking-[-.02em] text-[#292a2d]">{academia.title}</h2>
           <div className="mx-auto grid max-w-[1080px] scale-[1.03] grid-cols-[200px_1fr] items-center gap-10 rounded-[28px] border border-[#f1e9e5] bg-white p-9 text-left shadow-[0_12px_30px_rgba(255,106,0,.06)] max-lg:grid-cols-1 max-sm:scale-100 max-sm:gap-6 max-sm:p-6">
@@ -131,7 +132,7 @@ export default function Research() {
 
       {/* Engine */}
       <section className="py-20 max-sm:py-14">
-        <div className="mx-auto max-w-[1440px] max-lg:px-6 max-sm:px-4">
+        <div className={container}>
           <div className="mb-8 flex items-end justify-between gap-6 max-sm:flex-col max-sm:items-start">
             <div><h2 className="text-[clamp(23px,2.5vw,32px)] font-semibold tracking-[-.02em] text-[#292a2d]">{engine.title}</h2><p className="mt-1 text-[12px] text-[#969aa2]">{engine.text}</p></div>
             <span className="text-[9px] font-semibold text-[#ff6a00]">{engine.sheet}</span>
@@ -156,7 +157,7 @@ export default function Research() {
 
       {/* Field */}
       <section className="bg-[#f8f8f8] py-16 max-sm:py-12">
-        <div className="mx-auto max-w-[1440px] max-lg:px-6 max-sm:px-4">
+        <div className={container}>
           <h2 className="mb-7 text-[16px] font-semibold text-[#292a2d]">{field.title}</h2>
           <div className="grid grid-cols-3 gap-6 max-lg:grid-cols-1">
             {field.items.map((f) => (
@@ -177,7 +178,7 @@ export default function Research() {
 
       {/* CTA */}
       <section className="py-28 text-center max-sm:py-16">
-        <div className="mx-auto max-w-[1280px] px-6 max-sm:px-4">
+        <div className={container}>
           <h2 className="text-[clamp(26px,3.2vw,40px)] font-semibold tracking-[-.025em] text-[#292a2d]">{cta.title}</h2>
           <p className="mx-auto mt-3 max-w-[620px] text-[10px] leading-[1.7] text-[#9397a0]">{cta.text}</p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">

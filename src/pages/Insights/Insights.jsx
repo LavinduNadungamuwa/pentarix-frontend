@@ -1,3 +1,4 @@
+import { pageContainer as container } from '../../components/pageLayout'
 import { Link } from 'react-router-dom'
 import Hero from '../../components/Hero'
 import Button from '../../components/Button'
@@ -44,7 +45,7 @@ export default function Insights() {
 
       {/* Technology stack */}
       <section className="bg-[#f8f8f8] py-14 max-sm:py-10">
-        <div className="mx-auto grid max-w-[1280px] grid-cols-5 gap-4 max-lg:px-6 max-lg:grid-cols-2 max-sm:grid-cols-1 max-sm:px-4">
+        <div className={`${container} grid grid-cols-5 gap-4 max-lg:grid-cols-2 max-sm:grid-cols-1`}>
           {stack.map((col) => (
             <div key={col.title} className="transition-[transform,box-shadow] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(20,24,30,0.12)] hover:ring-1 hover:ring-[#ff6a00] motion-reduce:transform-none motion-reduce:transition-none rounded-2xl border border-[#efefea] bg-white p-5 shadow-[0_5px_18px_rgba(0,0,0,.025)] max-sm:p-5">
               <small className="text-[8px] font-bold uppercase tracking-[.15em] text-[#ff6a00]">{col.title}</small>
@@ -64,7 +65,7 @@ export default function Insights() {
       {/* Collaboration */}
       {/* CTA */}
       <section className="py-20 text-center max-sm:py-14">
-        <div className="mx-auto max-w-[1280px] max-lg:px-6 max-sm:px-4">
+        <div className={container}>
           <h2 className="text-[clamp(24px,3vw,34px)] font-semibold tracking-[-.025em] text-[#252629]">{collaborations.title}</h2>
           <p className="mx-auto mt-2 max-w-[600px] text-[11px] leading-[1.6] text-[#969aa2]">{collaborations.text}</p>
           <div className="my-10 grid grid-cols-4 gap-5 max-md:grid-cols-2 max-sm:gap-3">
@@ -91,7 +92,7 @@ export default function Insights() {
 
       {/* Insights articles */}
       <section className="bg-[#f8f8f8] py-20 max-sm:py-14" id="insights">
-        <div className="mx-auto max-w-[1440px] max-lg:px-6 max-sm:px-4">
+        <div className={container}>
           <div className="mb-10 flex items-end justify-between gap-6 max-sm:flex-col max-sm:items-start">
             <div><h2 className="text-[clamp(24px,3vw,34px)] font-semibold tracking-[-.025em] text-[#252629]">{insights.title}</h2><p className="mt-1 text-[10px] text-[#969aa2]">{insights.text}</p></div>
             <Link to={insights.linkTo} className="inline-flex items-center gap-2 text-[9px] font-semibold text-[#ff6a00]">{insights.linkLabel} <ArrowRight size={12} /></Link>
@@ -130,7 +131,7 @@ export default function Insights() {
       {/* Collaboration */}
       {/* CTA */}
       <section className="py-20 text-center max-sm:py-14">
-        <div className="mx-auto max-w-[900px] px-6 max-sm:px-4">
+        <div className={container}>
           <h2 className="text-[clamp(30px,3.4vw,44px)] font-semibold leading-[1.08] tracking-[-.025em] text-[#202124]"><RichText text={cta.title} /></h2>
           <p className="mx-auto mt-5 max-w-[650px] text-[clamp(12px,1vw,15px)] leading-[1.6] text-[#8c929c]">{cta.text}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">

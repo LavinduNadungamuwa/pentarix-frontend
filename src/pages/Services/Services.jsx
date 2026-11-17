@@ -1,3 +1,4 @@
+import { pageContainer as container } from '../../components/pageLayout'
 import { Link } from 'react-router-dom'
 import Hero from '../../components/Hero'
 import Button from '../../components/Button'
@@ -14,7 +15,7 @@ export default function Services() {
 
       {/* Approach */}
       <section className="border-t border-[#f0f0ee] py-16 max-sm:py-12">
-        <div className="mx-auto grid max-w-[1280px] grid-cols-[.8fr_1fr_1fr] gap-10 max-lg:grid-cols-1 max-lg:px-6 max-sm:px-4">
+        <div className={`${container} grid grid-cols-[.8fr_1fr_1fr] gap-10 max-lg:grid-cols-1`}>
           <h2 className="max-w-[300px] text-[clamp(22px,2.4vw,30px)] font-semibold leading-[1.2] tracking-[-.02em] text-[#242529]">
             {approach.title}
           </h2>
@@ -28,7 +29,7 @@ export default function Services() {
 
       {/* Service offerings */}
       <section className="bg-[#f8f8f8] py-16 max-sm:py-12">
-        <div className="mx-auto grid max-w-[1280px] grid-cols-12 gap-5 max-lg:px-6 max-sm:grid-cols-1 max-sm:px-4">
+        <div className={`${container} grid grid-cols-12 gap-5`}>
           <article
             id="digital-platforms"
             className="scroll-mt-24 relative col-span-7 overflow-hidden rounded-[24px] border border-[#efefea] bg-white p-8 shadow-[0_8px_24px_rgba(0,0,0,.035)] transition-[transform,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(20,24,30,0.12)] motion-reduce:transform-none motion-reduce:transition-none max-lg:col-span-12 max-sm:p-6">
@@ -120,7 +121,7 @@ export default function Services() {
 
       {/* AI spotlight */}
       <section className="py-16 max-sm:py-12">
-        <div className="mx-auto max-w-[1280px] px-6 max-sm:px-4">
+        <div className={container}>
           <div className="grid grid-cols-[1.05fr_.95fr] overflow-hidden rounded-[28px] bg-white shadow-[0_16px_45px_rgba(0,0,0,.09)] max-lg:grid-cols-1">
             <div className="p-10 max-sm:p-6">
               <span className="inline-block rounded bg-[#ff6a00]/10 px-2.5 py-1 text-[8px] font-bold uppercase tracking-[.15em] text-[#ff6a00]">
@@ -176,7 +177,7 @@ export default function Services() {
 
       {/* Technology stack */}
       <section className="bg-[#f8f8f8] py-16 text-center max-sm:py-12">
-        <div className="mx-auto max-w-[1280px] px-6 max-sm:px-4">
+        <div className={container}>
           <h2 className="text-[clamp(22px,2.5vw,30px)] font-semibold tracking-[-.02em] text-[#252629]">{stack.title}</h2>
           <p className="mx-auto mt-2 max-w-[560px] text-[10px] text-[#92969e]">{stack.text}</p>
           <div className="mt-8 grid grid-cols-6 gap-4 max-lg:grid-cols-3 max-sm:grid-cols-2">
@@ -196,7 +197,7 @@ export default function Services() {
 
       {/* CTA */}
       <section className="py-14 max-sm:py-10">
-        <div className="mx-auto max-w-[1440px] px-6 max-sm:px-4">
+        <div className={container}>
           <div
             className="rounded-[48px] bg-[#fafafa] px-8 py-16 text-center max-sm:rounded-[32px] max-sm:px-5 max-sm:py-12"
             style={{

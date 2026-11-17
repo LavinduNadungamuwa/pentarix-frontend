@@ -1,3 +1,4 @@
+import { pageContainer as container } from '../../components/pageLayout'
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import Hero from '../../components/Hero'
@@ -42,7 +43,7 @@ export default function CareersContact() {
 
       {/* Why Pentarix */}
       <section className="bg-[#f8f8f8] py-16 text-center max-sm:py-12" id="why">
-        <div className="mx-auto max-w-[1440px] max-lg:px-6 max-sm:px-4">
+        <div className={container}>
           <h2 className="text-[clamp(28px,3.4vw,40px)] font-bold">{why.title}</h2>
           <p className="mx-auto mt-3 max-w-[560px] text-[#9a9a9a]">{why.text}</p>
           <div className="mx-auto mt-10 grid max-w-[1060px] grid-cols-3 gap-5 text-left max-lg:grid-cols-1">
@@ -59,7 +60,7 @@ export default function CareersContact() {
 
       {/* Open roles */}
       <section className="py-16 max-sm:py-12" id="openings">
-        <div className="mx-auto max-w-[1440px] max-lg:px-6 max-sm:px-4">
+        <div className={container}>
           <div className="mb-10 flex items-end justify-between gap-6 max-sm:flex-col max-sm:items-start">
             <div><h2 className="text-[clamp(24px,3vw,34px)] font-semibold tracking-[-.02em] text-[#242529]">{openings.title}</h2><p className="mt-1 text-[11px] text-[#92969e]">{openings.text}</p></div>
             <div className="flex flex-wrap gap-2.5">
@@ -106,7 +107,7 @@ export default function CareersContact() {
 
       {/* Contact */}
       <section className="scroll-mt-[72px] flex flex-col justify-center bg-[#f8f8f8] py-10 max-sm:py-8 lg:min-h-[calc(80svh-72px)]" id="contact">
-        <div className="mx-auto max-w-[1440px] max-lg:px-6 max-sm:px-4">
+        <div className={container}>
           <div className="text-center">
             <span className="text-[8px] font-bold uppercase tracking-[.2em] text-[#ff6a00]">{contact.eyebrow}</span>
             <h2 className="my-3 text-[clamp(34px,4.4vw,52px)] font-semibold leading-[1.05] tracking-[-.025em] text-[#202124]">

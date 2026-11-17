@@ -1,3 +1,4 @@
+import { pageContainer as container } from '../../../components/pageLayout'
 import Hero from '../../../components/Hero'
 import Cta from '../../../components/Cta'
 import Button from '../../../components/Button'
@@ -7,7 +8,6 @@ import { hero, industries, architecture, cta, certifications } from './industryS
 import heroImage from '../../../assets/images/services/industrySpecific/img1.png'
 import architectureImage from '../../../assets/images/services/industrySpecific/img2.png'
 
-const container = 'mx-auto max-w-[1280px] px-6 max-sm:px-4'
 const heading = 'text-[clamp(30px,3.6vw,46px)] font-semibold leading-[1.18] tracking-[-.025em] text-[#242529]'
 const eyebrow = 'text-[11px] font-bold uppercase tracking-[.18em] text-[#ff6a00]'
 const body = 'text-[16px] leading-[1.8] text-[#858993]'

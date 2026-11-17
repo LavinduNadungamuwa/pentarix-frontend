@@ -1,112 +1,57 @@
-import {
-  ShoppingBag, Building, FileText, Globe, Monitor,
-  Truck, FileCheck, Users, Database, GridIcon,
-} from '../../../components/Icons'
-import distributionImage from '../../../assets/images/projects/dashboard.png'
-import hrmsImage from '../../../assets/images/projects/hrms.png'
-import chatbotImage from '../../../assets/images/projects/dms.png'
+import heroImage from '../../../assets/images/projects/economicCenter/img1.png'
+import operationsImage from '../../../assets/images/projects/economicCenter/img2.png'
+import icon1 from '../../../assets/icons/projects/icon1.png'
+import icon2 from '../../../assets/icons/projects/icon2.png'
+import icon3 from '../../../assets/icons/projects/icon3.png'
+import icon4 from '../../../assets/icons/projects/icon4.png'
+import icon5 from '../../../assets/icons/projects/icon5.png'
+import icon6 from '../../../assets/icons/projects/icon6.png'
+import distributionImage from '../../../assets/images/projects/distribution.png'
+import hrisImage from '../../../assets/images/projects/hris.png'
+import chatbotImage from '../../../assets/images/projects/aichat.png'
 
 export const hero = {
   eyebrow: 'Public Sector · Enterprise Software',
-  title: 'Economic Center Management System',
-  subtitle: 'Digitizing Market Operations. Simplifying Management. Empowering Growth.',
-  description: 'A comprehensive platform bringing public information, ticketing, and finance into one digital environment.',
-  actions: [
-    { label: 'Discuss Your Project', to: '/contact' },
-    { label: 'All Projects', to: '/our-work', variant: 'outline-dark' },
+  title: 'Economic Center\nManagement\n{System}',
+  description: 'A public-facing website and integrated management platform connecting market information, ticketing, tenant administration, and financial activities.',
+  image: heroImage,
+  actions: [{ label: 'Discuss Your Project', to: '/contact' }],
+}
+
+export const capabilities = {
+  eyebrow: 'Core Capabilities',
+  title: 'Comprehensive Market Ecosystem',
+  items: [
+    { icon: icon1, title: 'Market Prices', text: 'Real-time daily wholesale and retail price tracking with historical analysis and trend forecasting.' },
+    { icon: icon2, title: 'Multilingual\nAccess', text: 'Full support for Sinhala, Tamil, and English to ensure accessibility for all traders and consumers.' },
+    { icon: icon3, title: 'Digital\nTicketing', text: 'QR-based entry and exit management for vehicles and traders, reducing gate congestion.' },
+    { icon: icon4, title: 'Tenant Management', text: 'Automated stall allocation, agreement tracking, and tenant history databases.' },
+    { icon: icon5, title: 'Financial Admin', text: 'Integrated rent collection, utility billing, and automated financial reporting for authorities.' },
+    { icon: icon6, title: 'Admin Dashboard', text: 'Centralized oversight for ministry officials to monitor market health and economic impact.' },
   ],
 }
 
-export const overview = {
-  title: 'Transforming traditional\nmarket operations.',
+export const operations = {
+  title: 'Public Information and\nDaily Operations,\n{Connected.}',
+  image: operationsImage,
   paragraphs: [
-    {
-      before: 'Pentarix Labs developed a comprehensive Economic Center Management System to transform traditional market operations through modern digital technology. The platform combines a ',
-      strong: 'public-facing website with an integrated management system',
-      after: ', enabling efficient handling of daily operations, financial activities, ticketing services, and public information from one centralized digital environment.',
-    },
-    {
-      before: 'Designed to reduce manual work and simplify complex administrative processes, the solution helps improve operational efficiency, financial visibility, and information accessibility while supporting the digital transformation of agricultural marketplace management.',
-    },
+    'We bridged the gap between complex internal logistics and the need for public transparency. The platform allows market administrators to manage thousands of daily transactions and tenant records while simultaneously serving real-time price indexes to the general public and government agencies.',
+    "By integrating IoT hardware at entry gates with a cloud-based ERP, we've enabled a level of data-driven governance never before seen in the local agricultural sector.",
   ],
-}
-
-export const meta = [
-  { label: 'Category', value: 'Public Sector' },
-  { label: 'Type', value: 'Website + Management System' },
-  { label: 'Domain', value: 'Agricultural Marketplace' },
-  { label: 'Developed by', value: 'Pentarix Labs' },
-]
-
-export const featuresIntro = {
-  eyebrow: 'Key Features',
-  title: 'Everything the market needs,\nin one platform.',
-  text: 'From public price boards to tenant arrears and profit calculations, every part of daily market life is connected.',
-}
-
-export const groups = [
-  {
-    id: 'portal',
-    title: 'Public Information Portal',
-    text: 'A public-facing website that keeps farmers, traders, tenants and the general public informed.',
-    features: [
-      { Icon: ShoppingBag, title: 'Daily Market Price Updates', text: 'Publishes daily fruit and vegetable prices with historical price information, helping users make informed market decisions.' },
-      { Icon: Building, title: 'Market Information Management', text: 'Provides essential market details, open-house information, contact numbers, services, and facility information through a centralized platform.' },
-      { Icon: FileText, title: 'News & Announcements', text: 'Enables the publication of public notices, events, announcements, and important updates.' },
-      { Icon: Globe, title: 'Multilingual Access', text: 'Makes market information accessible to a wider audience through multiple language options.' },
-      { Icon: Monitor, title: 'Digital Information Portal', text: 'Offers convenient online access to market information and public updates for farmers, traders, tenants, and the general public.' },
-    ],
-  },
-  {
-    id: 'operations',
-    title: 'Operations & Ticketing',
-    text: 'Day-to-day market operations, digitized and recorded in an organized way.',
-    features: [
-      { Icon: Truck, title: 'Vehicle Ticketing System', text: 'Digitizes vehicle ticketing activities and maintains organized records to support smoother operational workflows.' },
-      { Icon: FileCheck, title: 'Sanitary Ticketing System', text: 'Streamlines sanitary service-related ticketing and transaction record management.' },
-      { Icon: Users, title: 'Tenant Management', text: 'Simplifies tenant administration through centralized records, monthly rental payment updates, arrears tracking, and the management of fines and penalties.' },
-    ],
-  },
-  {
-    id: 'finance',
-    title: 'Finance & Administration',
-    text: 'Financial visibility and full administrative control from a single interface.',
-    features: [
-      { Icon: Database, title: 'Invoice Generation & Financial Management', text: 'Supports invoice generation, payment monitoring, and total profit calculations based on recorded financial data.' },
-      { Icon: GridIcon, title: 'Administrative Dashboard', text: 'Provides a centralized interface to manage system functions, monitor operations, access records, and oversee important administrative and financial activities.' },
-    ],
-  },
-]
-
-export const audience = {
-  title: 'Built for everyone in the market.',
-  text: 'One platform serving the people who buy, sell, rent and manage.',
-  items: ['Farmers', 'Traders', 'Tenants', 'General Public', 'Administrators'],
-}
-
-export const impact = {
-  eyebrow: 'Project Impact',
-  title: 'From paperwork to a digitally connected environment.',
-  text: 'By replacing manual processes with integrated digital workflows, the Economic Center Management System helps minimize paperwork, organize operational records, simplify financial administration, and improve access to essential information. It brings public services and internal management activities together, creating a more efficient, transparent, and digitally connected environment.',
-  points: ['Minimized paperwork', 'Organized operational records', 'Simplified financial administration', 'Improved access to information'],
-  credit: 'Developed by Pentarix Labs',
-  tagline: 'Turning complex operations into simpler digital experiences.',
+  trust: 'Trusted by 12+ Economic Centers',
 }
 
 export const more = {
   title: 'Explore more of our work',
   items: [
-    { title: 'Human Resource Information System (HRIS)', tag: 'Enterprise', to: '/our-work/hris', image: hrmsImage },
+    { title: 'Human Resource Information System (HRIS)', tag: 'Enterprise', to: '/our-work/hris', image: hrisImage },
     { title: 'Distribution Agency Management System', tag: 'Distribution & Logistics', to: '/our-work/distribution-system', image: distributionImage, imagePosition: 'top' },
     { title: 'AI-Powered Customer Support Chatbot', tag: 'Artificial Intelligence', to: '/our-work/ai-chatbot', image: chatbotImage },
   ],
 }
 
 export const cta = {
-  title: 'Have a project in mind?',
-  text: 'Let’s transform your complex business requirements into high-performance digital products. Our engineers are ready to build.',
-  actions: [
-    { label: 'Start Your Project', to: '/contact' },
-    { label: 'Book a Technical Call', to: '/contact', variant: 'outline' },
-  ],
+  title: 'Planning a Similar\nDigital\n{Transformation?}',
+  text: "Let's discuss how we can modernize your enterprise operations with custom-engineered software solutions.",
+  actions: [{ label: 'Discuss Your Project', to: '/contact' }],
 }

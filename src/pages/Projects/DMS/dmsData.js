@@ -1,87 +1,46 @@
-import { Database, Building, ShoppingCart, Truck, Users, FileText, FileCheck, RefreshCw, Shield, Monitor, Layers, Settings, Check } from '../../../components/Icons'
-import dmsImage from '../../../assets/images/projects/dashboard.png'
-import posImage from '../../../assets/images/projects/pos.png'
-import chatbotImage from '../../../assets/images/projects/dms.png'
-import schoolImage from '../../../assets/images/projects/school.png'
+import heroImage from '../../../assets/images/projects/dms/img1.png'
+import operationsImage from '../../../assets/images/projects/dms/img2.png'
+import detailImage from '../../../assets/images/projects/dms/img3.png'
+import icon1 from '../../../assets/icons/projects/icon1.png'
+import icon2 from '../../../assets/icons/projects/icon2.png'
+import icon3 from '../../../assets/icons/projects/icon3.png'
+import icon4 from '../../../assets/icons/projects/icon4.png'
+import icon5 from '../../../assets/icons/projects/icon5.png'
+import icon6 from '../../../assets/icons/projects/icon6.png'
+import posImage from '../../../assets/images/projects/pos2.png'
+import chatbotImage from '../../../assets/images/projects/aichat.png'
+import schoolImage from '../../../assets/images/projects/class.png'
 
 export const hero = {
-  eyebrow: 'Distribution Management · Business Automation',
-  title: 'Distribution Agency Management System',
-  subtitle: 'Integrated Distribution, Inventory & Sales Management Solution',
-  description: 'A centralized platform connecting inventory, purchasing, sales, warehouse operations, deliveries, and payments.',
-  actions: [
-    { label: 'Discuss Your Project', to: '/contact' },
-    { label: 'All Projects', to: '/our-work', variant: 'outline-dark' },
+  eyebrow: 'Distribution · Business Automation',
+  title: 'Distribution Agency\nManagement\n{System}',
+  description: 'An integrated platform connecting warehouse inventory, supplier purchasing, mobile sales orders, deliveries, and customer payments.',
+  image: heroImage,
+  actions: [{ label: 'Discuss Your Project', to: '/contact' }],
+}
+
+export const capabilities = {
+  eyebrow: 'Core Capabilities',
+  title: 'Optimized Supply Chain Control',
+  items: [
+    { icon: icon1, title: 'Inventory &\nSuppliers', text: 'Real-time stock tracking across multiple warehouses with automated reordering and supplier relationship management.' },
+    { icon: icon5, title: 'Mobile Sales\nOrders', text: 'Empower field agents with mobile apps for instant order capture, stock checks, and historical customer data access.' },
+    { icon: icon3, title: 'Warehouse &\nDelivery', text: 'Streamlined picking, packing, and dispatch workflows with integrated GPS route optimization for delivery fleets.' },
+    { icon: icon4, title: 'Customers &\nCredit', text: 'Manage complex credit limits, outstanding balances, and customer hierarchies with automated credit control alerts.' },
+    { icon: icon6, title: 'Payments &\nInvoices', text: 'Instant invoice generation and payment tracking, supporting cash, cheque, and digital payment collections in the field.' },
+    { icon: icon2, title: 'Commissions &\nReporting', text: 'Dynamic sales commission calculations and executive dashboards for real-time visibility into agency performance.' },
   ],
 }
 
-export const image = dmsImage
-
-export const overview = {
-  title: 'Bringing distribution operations together.',
+export const operations = {
+  title: 'Keep Every Team\n{Working Together.}',
+  image: operationsImage,
+  detailImage,
   paragraphs: [
-    'Pentarix designed a comprehensive Distribution Agency Management System to streamline and digitalize the daily operations of distribution businesses. The solution brings inventory management, supplier purchasing, sales orders, warehouse operations, deliveries, customer payments, and sales representative commissions into one centralized platform.',
-    'Designed to replace manual record keeping and disconnected spreadsheets, the system enables businesses to manage distribution processes with greater accuracy, transparency, and operational control. Mobile-accessible sales and delivery functions, automated inventory monitoring, credit management, and centralized reporting provide an integrated way to manage distribution networks.',
+    'Distribution agencies often struggle with information silos between warehouse staff, field sales agents, and office accountants. Our system creates a single source of truth, ensuring that every team member has real-time access to the data they need.',
+    'When a sales agent captures an order on their mobile device, inventory is instantly reserved, the warehouse is notified for picking, and accounting can immediately track potential revenue. This seamless coordination reduces stock-outs, prevents over-selling, and accelerates the entire order-to-cash cycle.',
   ],
-}
-
-export const meta = [
-  { label: 'Category', value: 'Enterprise Software' },
-  { label: 'Focus', value: 'Distribution Management' },
-  { label: 'Capabilities', value: 'Inventory, Sales & Delivery' },
-  { label: 'Developed by', value: 'Pentarix (PVT) Ltd' },
-]
-
-export const featuresIntro = {
-  eyebrow: 'Key Features',
-  title: 'One connected system for the distribution lifecycle.',
-  text: 'Coordinate products, people, orders, deliveries, and payments through a unified operational platform.',
-}
-
-export const groups = [
-  {
-    id: 'inventory',
-    title: 'Inventory & Suppliers',
-    text: 'Maintain accurate stock and supplier records across warehouses and purchasing activities.',
-    features: [
-      { Icon: Database, title: 'Inventory Management', text: 'Manage products, warehouse stock, carton and unit quantities, and inventory monitoring in one place.' },
-      { Icon: Building, title: 'Supplier Management', text: 'Keep supplier information, purchasing records, outstanding balances, and payment tracking organized.' },
-      { Icon: Layers, title: 'Warehouse Management', text: 'Monitor stock availability, prepare and pack orders, and keep inventory updated.' },
-      { Icon: RefreshCw, title: 'Expiry & Stock Alerts', text: 'Receive automated notifications for low stock, product expiry dates, shortages, and overdue payments.' },
-    ],
-  },
-  {
-    id: 'sales-delivery',
-    title: 'Sales & Delivery',
-    text: 'Connect customer orders with fulfillment, delivery assignments, and accurate invoices.',
-    features: [
-      { Icon: ShoppingCart, title: 'Sales Order Management', text: 'Place, process, and track digital orders through mobile-accessible interfaces for sales representatives.' },
-      { Icon: Truck, title: 'Delivery Management', text: 'Assign deliveries and track order fulfillment, partial deliveries, and failed delivery outcomes.' },
-      { Icon: Users, title: 'Customer & Shop Management', text: 'Manage customer and shop details, routes, purchasing history, and credit information centrally.' },
-      { Icon: FileCheck, title: 'Invoice Management', text: 'Generate invoices based on delivered quantities for accurate sales and payment records.' },
-    ],
-  },
-  {
-    id: 'finance-control',
-    title: 'Payments & Business Control',
-    text: 'Track financial activity, sales teams, permissions, and business performance.',
-    features: [
-      { Icon: FileText, title: 'Payment & Credit Management', text: 'Record cash, cheque, and bank-transfer payments, verify payments, and track outstanding balances.' },
-      { Icon: Users, title: 'Sales Representative Management', text: 'Track sales and assigned customers, with commission calculations based on completed deliveries.' },
-      { Icon: Shield, title: 'Role-Based Access', text: 'Provide dedicated system access for administrators, sales representatives, and delivery personnel.' },
-      { Icon: Monitor, title: 'Reporting & Analytics', text: 'View centralized reports for sales performance, inventory, deliveries, customer balances, and commissions.' },
-    ],
-  },
-]
-
-export const impact = {
-  eyebrow: 'Project Impact',
-  title: 'From fragmented records to coordinated distribution.',
-  text: 'The system improves operational efficiency by replacing fragmented manual processes and centralizing essential business activities. It gives teams greater visibility into stock availability, customer orders, delivery progress, outstanding payments, and overall sales performance.',
-  followup: 'By improving coordination between warehouse staff, sales representatives, delivery teams, and management, the platform supports faster decisions, better inventory control, financial transparency, and organized distribution operations. Its scalable structure can grow with additional products, customers, routes, suppliers, users, and warehouse locations.',
-  points: ['Greater inventory visibility', 'Coordinated sales and deliveries', 'Clearer payment tracking', 'Flexible business expansion'],
-  credit: 'Developed by Pentarix (PVT) Ltd',
-  tagline: 'Connecting every step of distribution operations.',
+  trust: 'Driving 25% Increase in Logistics Efficiency',
 }
 
 export const more = {
@@ -94,10 +53,7 @@ export const more = {
 }
 
 export const cta = {
-  title: 'Ready to streamline\nyour distribution operations?',
-  text: 'Let’s connect your inventory, sales, warehouse, and delivery workflows in one system.',
-  actions: [
-    { label: 'Discuss Your Project', to: '/contact' },
-    { label: 'Book a Technical Call', to: '/contact', variant: 'outline' },
-  ],
+  title: 'Bring Your Distribution\n{Operations Together.}',
+  text: "Ready to transform your agency with intelligent automation? Let's discuss how we can customize our solution to fit your unique distribution workflows.",
+  actions: [{ label: 'Discuss Your Project', to: '/contact' }],
 }

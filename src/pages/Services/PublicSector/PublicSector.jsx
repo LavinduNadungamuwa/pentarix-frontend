@@ -1,3 +1,4 @@
+import { pageContainer as container } from '../../../components/pageLayout'
 import Button from '../../../components/Button'
 import Hero from '../../../components/Hero'
 import Cta from '../../../components/Cta'
@@ -7,7 +8,6 @@ import heroImage from '../../../assets/images/services/publicSector/img1.jpg'
 import caseImage from '../../../assets/images/services/publicSector/img2.png'
 import technologyImage from '../../../assets/images/services/dms-techy.png'
 
-const container = 'mx-auto max-w-[1280px] px-6 max-sm:px-4'
 const eyebrow = 'text-[11px] font-bold uppercase tracking-[.22em] text-[#ff6a00]'
 const text = 'text-[15px] leading-[1.7] text-[#858993]'
 

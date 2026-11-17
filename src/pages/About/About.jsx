@@ -1,3 +1,4 @@
+import { pageContainer as container } from '../../components/pageLayout'
 import { Link } from 'react-router-dom'
 import Hero from '../../components/Hero'
 import RichText from '../../components/RichText'
@@ -18,7 +19,7 @@ export default function About() {
 
       {/* Legacy */}
       <section className="bg-[#f7f7f7] py-[96px] max-md:py-16">
-        <div className="mx-auto grid max-w-[1320px] grid-cols-2 items-center gap-[72px] px-6 max-md:grid-cols-1 max-md:gap-10 max-sm:px-5">
+        <div className={`${container} grid grid-cols-2 items-center gap-[72px] max-md:grid-cols-1 max-md:gap-10`}>
           <div className="aspect-square w-full overflow-hidden rounded-[28px] shadow-[0_18px_35px_rgba(20,24,30,.12)]">
             <img src={legacy.image} alt="Pentarix office building" className="size-full scale-[1.08] object-cover object-center" />
           </div>
@@ -45,7 +46,7 @@ export default function About() {
 
       {/* Mission and vision */}
       <section className="py-[96px] max-md:py-16">
-        <div className="mx-auto grid max-w-[960px] grid-cols-2 gap-[60px] px-6 max-md:gap-6 max-sm:grid-cols-1 max-sm:px-5">
+        <div className={`${container} grid grid-cols-2 gap-[60px] max-md:gap-6 max-sm:grid-cols-1`}>
           {missionVision.map(({ id, icon, title, text, dark }) => (
             <article
               key={id}
@@ -67,7 +68,7 @@ export default function About() {
 
       {/* Pillars */}
       <section className="border-t border-[#ededed] py-[78px] text-center max-md:py-16">
-        <div className="mx-auto max-w-[1200px] px-6 max-sm:px-5">
+        <div className={container}>
           <span className="mb-3 block text-[9px] font-semibold uppercase tracking-[.22em] text-[#ff6a00]">
             {pillars.eyebrow}
           </span>
@@ -91,7 +92,7 @@ export default function About() {
 
       {/* Leadership */}
       <section className="bg-[#f7f7f7] py-[96px] max-md:py-16">
-        <div className="mx-auto max-w-[1320px] px-6 max-sm:px-5">
+        <div className={container}>
           <div className="mb-[54px] flex items-end justify-between gap-8 max-sm:mb-8 max-sm:flex-col max-sm:items-start">
             <div>
               <h2 className="mb-4 whitespace-pre-line text-[clamp(28px,3vw,38px)] font-semibold leading-[1.05] tracking-[-.025em] text-[#202124]">
@@ -120,7 +121,7 @@ export default function About() {
 
       {/* Academic collaboration */}
       <section className="py-[96px] max-md:py-16">
-        <div className="mx-auto grid max-w-[1320px] grid-cols-2 items-center gap-[80px] px-6 max-md:grid-cols-1 max-md:gap-10 max-sm:px-5">
+        <div className={`${container} grid grid-cols-2 items-center gap-[80px] max-md:grid-cols-1 max-md:gap-10`}>
           <div className="max-w-[560px]">
             <span className="mb-4 block text-[11px] font-semibold uppercase tracking-[.2em] text-[#ff6a00]">
               {academia.eyebrow}

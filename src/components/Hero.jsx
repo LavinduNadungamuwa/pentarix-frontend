@@ -1,3 +1,4 @@
+import { pageContainer } from './pageLayout'
 import Button from './Button'
 import RichText from './RichText'
 
@@ -58,7 +59,7 @@ export default function Hero({
       )}
       {isHome && <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.55)_55%,rgba(0,0,0,.25)),radial-gradient(ellipse_at_80%_30%,rgba(255,106,0,.18),transparent_55%)]" />}
 
-      <div className={`relative mx-auto w-full max-w-[1920px] ${isHome ? 'px-[clamp(48px,11.67vw,224px)] pb-0 pt-8 max-md:px-[clamp(24px,11.67vw,48px)]' : 'px-[clamp(48px,11.67vw,224px)] max-md:px-6'} ${aside ? 'grid grid-cols-[1.3fr_1fr] items-center gap-16 max-lg:grid-cols-1' : ''} ${contentClassName}`}>
+      <div className={`relative ${pageContainer} ${isHome ? 'pb-0 pt-8' : ''} ${aside ? 'grid grid-cols-[1.3fr_1fr] items-center gap-16 max-lg:grid-cols-1' : ''} ${contentClassName}`}>
         <div className="max-w-[896px]">
           {eyebrow && <span className="font-medium uppercase tracking-[.3em] text-[#ff6a00]">{eyebrow}</span>}
           <h1 className={`max-w-[680px] font-bold leading-[1.1] text-[#000000] ${isHome ? 'mt-5 mb-6 max-w-[780px] text-[clamp(48px,6vw,96px)] leading-[1.05] text-white' : 'my-3 mb-4 text-[clamp(30px,4.67vw,72px)]'} ${titleClassName}`}>

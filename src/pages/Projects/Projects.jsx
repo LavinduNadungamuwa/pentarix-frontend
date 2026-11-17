@@ -1,3 +1,4 @@
+import { pageContainer as container } from '../../components/pageLayout'
 import { Link } from 'react-router-dom'
 import Hero from '../../components/Hero'
 import Button from '../../components/Button'
@@ -10,7 +11,7 @@ import bookingCardIcon from '../../assets/icons/projects/booking.png'
 import multiServiceCardIcon from '../../assets/icons/projects/multiservice.png'
 import { hero, intro, flagship, cards, caseStudy, domains, cta } from './projectsData'
 import posImage from '../../assets/images/projects/pos.png'
-import hrImage from '../../assets/images/projects/hrms.png'
+import hrImage from '../../assets/images/projects/hris.png'
 import schoolImage from '../../assets/images/projects/school.png'
 import chatbotImage from '../../assets/images/projects/dms.png'
 import flagshipImage from '../../assets/images/projects/dashboard.png'
@@ -26,7 +27,7 @@ export default function Projects() {
 
       {/* Overview */}
       <section className="border-t border-[#f0f0ee] py-16 max-sm:py-12">
-        <div className="mx-auto grid max-w-[1440px] grid-cols-[.8fr_1.2fr] gap-16 max-lg:px-6 max-lg:grid-cols-1 max-sm:px-4 max-sm:gap-6">
+        <div className={`${container} grid grid-cols-[.8fr_1.2fr] gap-16 max-lg:grid-cols-1 max-sm:gap-6`}>
           <h2 className="max-w-[420px] text-[clamp(25px,2.5vw,36px)] font-semibold leading-[1.2] tracking-[-.025em] text-[#202124]"><RichText text={intro.title} /></h2>
           <div className="grid gap-4 text-[14px] leading-[1.8] text-[#8b9099] max-sm:text-[13px]">
             {intro.paragraphs.map((p, i) => (
@@ -42,7 +43,7 @@ export default function Projects() {
 
       {/* Flagship */}
       <section className="pb-24 max-sm:pb-16">
-        <div className="mx-auto max-w-[1440px] max-lg:px-6 max-sm:px-4">
+        <div className={container}>
           <Link to={flagship.to} className="grid min-h-[420px] grid-cols-[42.7%_57.3%] overflow-hidden rounded-[28px] bg-[#1b1b1b] text-white shadow-[0_24px_60px_rgba(0,0,0,.18)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(20,24,30,0.12)] hover:ring-1 hover:ring-[#ff6a00] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff6a00] focus-visible:ring-offset-2 motion-reduce:transform-none motion-reduce:transition-none max-lg:grid-cols-1">
             <div className="p-10 max-sm:p-7">
               <div className="flex flex-wrap gap-2">
@@ -71,7 +72,7 @@ export default function Projects() {
 
       {/* Bento */}
       <section className="bg-[#f8f8f8] py-24 max-sm:py-16">
-        <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6 max-lg:px-6 max-lg:grid-cols-1 max-sm:px-4">
+        <div className={`${container} grid grid-cols-12 gap-6`}>
           <Link to={cards.pos.to} className="col-span-8 rounded-[28px] border border-[#efefea] bg-white p-8 shadow-[0_8px_30px_rgba(0,0,0,.04)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(20,24,30,0.12)] hover:ring-1 hover:ring-[#ff6a00] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff6a00] focus-visible:ring-offset-2 motion-reduce:transform-none motion-reduce:transition-none max-lg:col-span-12 max-sm:p-5">
             <div className="flex items-start justify-between gap-4"><div><h3 className="text-[18px] font-semibold text-[#202124]">{cards.pos.title}</h3><p className="mt-1 max-w-[420px] text-[12px] leading-[1.6] text-[#9a9a9a]">{cards.pos.text}</p></div><img src={posCardIcon} alt="" aria-hidden="true" className="size-9 shrink-0 object-contain" /></div>
             <div className="mt-6 aspect-[2.2] overflow-hidden rounded-2xl max-sm:aspect-[1.4]">
@@ -141,14 +142,14 @@ export default function Projects() {
 
       {/* Case study */}
       <section className="py-20 max-sm:py-14">
-        <div className="mx-auto max-w-[1440px] max-lg:px-6 max-sm:px-4">
+        <div className={container}>
           <div className="rounded-[32px] border border-[#efefea] border-t-[4px] border-t-[#ff6a00] bg-white px-12 py-14 shadow-[0_16px_50px_rgba(0,0,0,.05)] max-sm:rounded-[24px] max-sm:px-6 max-sm:py-10">
             <div className="mx-auto max-w-[760px] text-center">
               <span className="text-[10px] font-bold uppercase tracking-[.18em] text-[#ff6a00]">{caseStudy.eyebrow}</span>
               <h2 className="mt-3 text-[clamp(22px,2.5vw,32px)] font-semibold tracking-[-.02em] text-[#222]">{caseStudy.title}</h2>
               <p className="mx-auto mt-2 max-w-[620px] text-[15px] leading-[1.7] text-[#9a9a9a]">{caseStudy.text}</p>
             </div>
-            <div className="mx-auto mt-12 grid max-w-[1080px] grid-cols-3 items-start gap-25 max-lg:grid-cols-1 max-sm:mt-8 max-sm:gap-7">
+            <div className="mx-auto mt-12 grid max-w-[1080px] grid-cols-3 items-start gap-10 max-lg:grid-cols-1 max-sm:mt-8 max-sm:gap-7">
               {caseStudy.columns.map((c) => (
                 <div key={c.number} className="min-w-0 text-left">
                   <b className="mb-4 grid size-8 place-items-center rounded-full bg-[#202124] text-[12px] text-white">{c.number}</b>
@@ -172,7 +173,7 @@ export default function Projects() {
 
       {/* Domains */}
       <section className="bg-[#f8f8f8] py-20 text-center max-sm:py-14">
-        <div className="mx-auto max-w-[1440px] max-lg:px-6 max-sm:px-4">
+        <div className={container}>
           <h2 className="text-[clamp(22px,2vw,28px)] font-semibold tracking-[-.02em] text-[#27282b]">{domains.title}</h2>
           <p className="mt-2 text-[14px] text-[#858b95]">{domains.text}</p>
           <div className="mx-auto mt-14 grid max-w-[1280px] grid-cols-6 gap-8 max-lg:grid-cols-3 max-lg:gap-5 max-sm:mt-8 max-sm:grid-cols-2 max-sm:gap-3">
@@ -187,7 +188,7 @@ export default function Projects() {
 
       {/* CTA */}
       <section className="py-14 max-sm:py-10">
-        <div className="mx-auto max-w-[1440px] max-lg:px-6 max-sm:px-4">
+        <div className={container}>
           <div
             className="rounded-[56px] bg-[#171717] px-8 py-20 text-center text-white shadow-[0_28px_55px_rgba(0,0,0,.22)] max-sm:rounded-[36px] max-sm:px-5 max-sm:py-14"
             style={{

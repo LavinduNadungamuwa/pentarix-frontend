@@ -1,3 +1,4 @@
+import { pageContainer as container } from '../../components/pageLayout'
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Hero from '../../components/Hero'
@@ -56,7 +57,7 @@ export default function Home() {
 
       {/* Intro */}
       <section className="py-[120px] max-sm:py-16" id="about">
-        <div className="mx-auto max-w-[1344px]">
+        <div className={container}>
           <h2 className="mb-14 text-[clamp(36px,4.6vw,56px)] font-semibold uppercase">
             <RichText text={intro.title} />
           </h2>
@@ -70,7 +71,7 @@ export default function Home() {
 
       {/* Services bento */}
       <section className="bg-[#f8f8f8] py-16" id="services">
-        <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6 max-lg:px-6 max-lg:grid-cols-1 max-sm:px-4">
+        <div className={`${container} grid grid-cols-12 gap-6`}>
           <article className="col-span-6 flex overflow-hidden rounded-2xl bg-white shadow-sm transition-[transform,box-shadow] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(20,24,30,0.12)] hover:ring-1 hover:ring-[#ff6a00] motion-reduce:transform-none motion-reduce:transition-none max-lg:col-span-12 max-sm:flex-col">
             <div className="flex flex-1 flex-col justify-center p-8">
               <span className="mb-5 inline-grid size-10 place-items-center rounded-[10px] bg-[#fff0e6] text-[#ff6a00]">
@@ -118,7 +119,7 @@ export default function Home() {
 
       {/* Software engineering excellence */}
       <section className="py-[104px] max-sm:py-16" id="Insights">
-        <div className="mx-auto grid max-w-[1440px] grid-cols-2 items-center gap-16 max-lg:px-6 max-lg:grid-cols-1 max-sm:px-4">
+        <div className={`${container} grid grid-cols-2 items-center gap-16 max-lg:grid-cols-1`}>
           <img src={excellence.image} alt="Software engineers collaborating at workstations" className="aspect-[1.5] w-full rounded-3xl object-cover" />
           <div>
             <span className="eyebrow">{excellence.eyebrow}</span>
@@ -140,8 +141,8 @@ export default function Home() {
       </section>
 
       {/* Pentarix Labs / research */}
-      <section className="bg-[#191919] px-5 py-[140px] text-white max-sm:px-4 max-sm:py-20" id="research">
-        <div className="mx-auto max-w-[1284px]">
+      <section className="bg-[#191919] py-[140px] text-white max-sm:py-20" id="research">
+        <div className={container}>
           <span className="mb-4 block text-center text-[12px] font-semibold uppercase tracking-[.42em] text-[#ff6a00]">{labs.eyebrow}</span>
           <h2 className="mx-auto mb-[84px] max-w-[760px] text-center text-[clamp(40px,4vw,68px)] font-semibold uppercase leading-[1.05] tracking-[.015em] text-white max-sm:mb-12 max-sm:text-[36px]">
             <RichText text={labs.title} />
@@ -163,7 +164,7 @@ export default function Home() {
 
       {/* Impactful solutions */}
       <section className="py-24 pb-[120px] max-sm:py-16" id="work">
-        <div className="mx-auto max-w-[1344px]">
+        <div className={container}>
           <div className="mb-10 flex items-end justify-between">
             <div>
               <span className="eyebrow">{work.eyebrow}</span>
@@ -192,8 +193,8 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="border-t border-[#eeeeee] px-5 py-24 pb-28 text-center max-sm:px-4 max-sm:py-16">
-        <div className="mx-auto max-w-[1344px]">
+      <section className="border-t border-[#eeeeee] py-24 pb-28 text-center max-sm:py-16">
+        <div className={container}>
           <h2 className="mx-auto mb-7 max-w-[900px] whitespace-pre-line text-[clamp(56px,5vw,76px)] font-semibold uppercase leading-[1.05] tracking-[-.035em] text-[#202020] max-sm:text-[42px]">
             <RichText text={cta.title} />
           </h2>

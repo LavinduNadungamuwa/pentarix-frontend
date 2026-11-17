@@ -12,7 +12,7 @@ import cloudInfrastructureImage from '../../assets/images/home/cloud-infrastruct
 import excellenceImage from '../../assets/images/home/excellence.png'
 import dmsImage from '../../assets/images/home/dms.png'
 import posImage from '../../assets/images/home/pos.png'
-import hrmsImage from '../../assets/images/home/hrms.png'
+import hrisImage from '../../assets/images/home/hris.png'
 import hipaaIcon from '../../assets/icons/marquee/hipaa.png'
 import wcagIcon from '../../assets/icons/marquee/wcag.png'
 import section508Icon from '../../assets/icons/marquee/sec508.png'
@@ -106,7 +106,7 @@ export const work = {
   projects: [
     { id: 'dms', to: '/our-work/distribution-system', badge: 'ENTERPRISE', title: 'Distribution Management System', text: 'Streamline distribution and inventory management.', image: dmsImage, className: 'project--large project--dashboard' },
     { id: 'pos', to: '/our-work/pos-system', tag: 'RETAIL TECH', title: 'Nex-Gen POS', text: 'Cloud-based retail operating system with real-time sync.', image: posImage, className: 'project--pos' },
-    { id: 'hrms', to: '/our-work/hris', tag: 'HR TECH', title: 'Lumina HRMS', text: 'Full-cycle human capital management with AI performance predictive tools.', image: hrmsImage, className: 'project--hrms' },
+    { id: 'hris', to: '/our-work/hris', tag: 'HR TECH', title: 'Lumina hris', text: 'Full-cycle human capital management with AI performance predictive tools.', image: hrisImage, className: 'project--hris' },
   ],
 }
 

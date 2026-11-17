@@ -1,87 +1,46 @@
-import { Cpu, Database, Bot, FileText, BookOpen, RefreshCw, Globe, Headset, Layers, Shield, Cloud, Check } from '../../../components/Icons'
-import chatbotImage from '../../../assets/images/projects/dms.png'
-import schoolImage from '../../../assets/images/projects/school.png'
-import posImage from '../../../assets/images/projects/pos.png'
-import hotelImage from '../../../assets/images/projects/hotel.jpg'
+import heroImage from '../../../assets/images/projects/aichatbot/img1.png'
+import operationsImage from '../../../assets/images/projects/aichatbot/img2.png'
+import detailImage from '../../../assets/images/projects/aichatbot/img3.png'
+import icon1 from '../../../assets/icons/projects/icon1.png'
+import icon2 from '../../../assets/icons/projects/icon2.png'
+import icon3 from '../../../assets/icons/projects/icon3.png'
+import icon4 from '../../../assets/icons/projects/icon4.png'
+import icon5 from '../../../assets/icons/projects/icon5.png'
+import icon6 from '../../../assets/icons/projects/icon6.png'
+import schoolImage from '../../../assets/images/projects/class.png'
+import posImage from '../../../assets/images/projects/pos2.png'
+import hotelImage from '../../../assets/images/projects/hotel.png'
 
 export const hero = {
-  eyebrow: 'Conversational AI · Customer Support Automation',
-  title: 'AI-Powered Customer Support Chatbot',
-  subtitle: 'Intelligent Customer Support Automation Using RAG',
-  description: 'Context-aware, knowledge-based assistance that helps businesses support customers across channels.',
-  actions: [
-    { label: 'Discuss Your Project', to: '/contact' },
-    { label: 'All Projects', to: '/our-work', variant: 'outline-dark' },
+  eyebrow: 'Artificial Intelligence · Customer Support',
+  title: 'AI-Powered\nCustomer\n{Support}',
+  description: 'Knowledge-based customer assistance using Retrieval-Augmented Generation to provide relevant, context-aware responses.',
+  image: heroImage,
+  actions: [{ label: 'Discuss Your Project', to: '/contact' }],
+}
+
+export const capabilities = {
+  eyebrow: 'Core Capabilities',
+  title: 'Intelligent Interaction Engine',
+  items: [
+    { icon: icon1, title: 'RAG Knowledge\nRetrieval', text: 'Dynamically queries your custom documentation and databases to ensure every response is grounded in facts, not hallucinations.' },
+    { icon: icon5, title: 'Natural\nConversations', text: 'Advanced LLM processing allows for fluid, human-like dialogue that understands intent, tone, and multi-turn context.' },
+    { icon: icon3, title: 'Automated FAQs', text: 'Instantly resolves common inquiries, reducing ticket volume by up to 70% and freeing your team for complex issues.' },
+    { icon: icon4, title: 'Website & SMS\nSupport', text: 'Seamless integration across your web platforms and mobile messaging channels for a unified customer experience.' },
+    { icon: icon6, title: 'Human Escalation', text: 'Smart sentiment analysis detects frustration and gracefully hands off complex cases to live agents with full context.' },
+    { icon: icon2, title: 'Conversation\nMonitoring', text: 'Real-time analytics and sentiment dashboards to monitor bot performance and identify knowledge gaps.' },
   ],
 }
 
-export const image = chatbotImage
-
-export const overview = {
-  title: 'Knowledgeable support, available across channels.',
+export const operations = {
+  title: 'Your Business\nKnowledge.\n{More Accessible.}',
+  image: operationsImage,
+  detailImage,
   paragraphs: [
-    'Pentarix designed an advanced AI-powered Customer Support Chatbot that leverages Retrieval-Augmented Generation (RAG) to deliver intelligent, context-aware, and knowledge-based customer assistance. The solution combines artificial intelligence with an organization’s knowledge base to answer customer inquiries, product and service questions, frequently asked questions, and basic troubleshooting requests.',
-    'Designed to modernize customer support operations, the chatbot enables businesses to provide automated assistance through web-based chat interfaces and SMS communication. By retrieving relevant information from organizational knowledge sources and generating natural-language responses, the solution aims to improve response accuracy, reduce repetitive workloads, and provide a consistent customer support experience.',
+    'Traditional chatbots often fail because they lack the specific knowledge of your business. Our AI engine bridges this gap by connecting directly to your knowledge sources—manuals, help articles, and product catalogs.',
+    "By utilizing advanced vector search and RAG architecture, the chatbot doesn't just guess; it retrieves the exact information needed to answer complex customer queries. This significantly reduces the manual workload on your support staff while providing 24/7 instant gratification for your users.",
   ],
-}
-
-export const meta = [
-  { label: 'Category', value: 'Artificial Intelligence' },
-  { label: 'Focus', value: 'Customer Support Automation' },
-  { label: 'Technology', value: 'Retrieval-Augmented Generation' },
-  { label: 'Developed by', value: 'Pentarix (PVT) Ltd' },
-]
-
-export const featuresIntro = {
-  eyebrow: 'Key Features',
-  title: 'Helpful conversations grounded in business knowledge.',
-  text: 'Connect trusted information to customer conversations, automate common requests, and involve people when needed.',
-}
-
-export const groups = [
-  {
-    id: 'knowledge',
-    title: 'Knowledge & Understanding',
-    text: 'Find relevant information and understand what customers need before responding.',
-    features: [
-      { Icon: Database, title: 'Retrieval-Augmented Generation (RAG)', text: 'Retrieve relevant information from organizational knowledge sources to generate context-aware responses.' },
-      { Icon: Cpu, title: 'Natural Language Understanding', text: 'Interpret customer questions and conversational intent to provide meaningful assistance.' },
-      { Icon: Bot, title: 'Intelligent Response Generation', text: 'Deliver automated, knowledge-based responses to customer inquiries.' },
-      { Icon: FileText, title: 'Knowledge Base Integration', text: 'Use centralized business information to support accurate and consistent customer communication.' },
-    ],
-  },
-  {
-    id: 'conversation',
-    title: 'Customer Conversations',
-    text: 'Create continuous, convenient support and connect customers with a person when needed.',
-    features: [
-      { Icon: BookOpen, title: 'Automated FAQ Handling', text: 'Answer frequently asked questions without requiring human intervention.' },
-      { Icon: RefreshCw, title: 'Context-Aware Conversations', text: 'Maintain conversational context to support natural, continuous interactions.' },
-      { Icon: Globe, title: 'Multi-Channel Support', text: 'Support customer interactions through website chat interfaces and SMS.' },
-      { Icon: Headset, title: 'Human Agent Escalation', text: 'Direct complex or unresolved inquiries to human support representatives.' },
-    ],
-  },
-  {
-    id: 'operations',
-    title: 'Support Operations & Trust',
-    text: 'Give teams tools to manage exceptions, improve service, and grow support capacity.',
-    features: [
-      { Icon: RefreshCw, title: 'Fallback Response Management', text: 'Provide guided responses when relevant information is unavailable or a query cannot be resolved.' },
-      { Icon: Layers, title: 'Conversation Logging & Analytics', text: 'Record customer interactions to support monitoring, analysis, and continuous improvement.' },
-      { Icon: Shield, title: 'Security & Access Control', text: 'Include data protection, secure communication, and access management considerations.' },
-      { Icon: Cloud, title: 'Scalable Support Architecture', text: 'Accommodate increasing customer interaction volumes as business requirements grow.' },
-    ],
-  },
-]
-
-export const impact = {
-  eyebrow: 'Project Impact',
-  title: 'Making customer support more responsive and consistent.',
-  text: 'The chatbot helps organizations improve customer engagement by delivering timely, consistent, and relevant assistance. RAG-based knowledge retrieval and intelligent response generation make better use of existing information resources while reducing workloads from repetitive inquiries.',
-  followup: 'The solution supports continuous customer assistance, improved operational efficiency, and more effective allocation of human support resources. Its adaptable architecture allows for future knowledge-base expansion, AI improvements, and additional business integrations.',
-  points: ['Timely, consistent customer assistance', 'Less repetitive support work', 'Better use of business knowledge', 'Flexible path for future integrations'],
-  credit: 'Developed by Pentarix (PVT) Ltd',
-  tagline: 'Turning trusted knowledge into helpful conversations.',
+  trust: 'Trusted by 50+ Support Teams Worldwide',
 }
 
 export const more = {
@@ -94,10 +53,7 @@ export const more = {
 }
 
 export const cta = {
-  title: 'Ready to make customer support\nmore intelligent?',
-  text: 'Let’s connect your business knowledge to helpful, always-available customer conversations.',
-  actions: [
-    { label: 'Discuss Your Project', to: '/contact' },
-    { label: 'Book a Technical Call', to: '/contact', variant: 'outline' },
-  ],
+  title: 'Explore Knowledge-Based\n{Customer Support.}',
+  text: "Ready to transform your customer experience with intelligent, context-aware automation? Let's discuss how we can train our AI on your unique knowledge base.",
+  actions: [{ label: 'Discuss Your Project', to: '/contact' }],
 }
