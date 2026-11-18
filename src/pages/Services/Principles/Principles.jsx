@@ -1,5 +1,6 @@
 import { pageContainer as container } from '../../../components/pageLayout'
 import Hero from '../../../components/Hero'
+import ProjectCapabilityCard from '../../../components/ProjectCapabilityCard'
 import Cta from '../../../components/Cta'
 import RichText from '../../../components/RichText'
 import { Check } from '../../../components/Icons'
@@ -35,13 +36,7 @@ export default function Principles() {
             <p className={`mx-auto mt-6 max-w-[850px] ${body}`}>{competency.text}</p>
           </div>
           <div className="mt-12 grid grid-cols-4 gap-7 max-lg:grid-cols-2 max-sm:mt-8 max-sm:grid-cols-1">
-            {competency.items.map(({ Icon, title, text }) => (
-              <article key={title} className="rounded-[24px] border border-[#e6e7eb] bg-white p-8 shadow-[0_2px_3px_rgba(0,0,0,.025)] max-sm:p-6">
-                <span className="mb-8 inline-grid size-14 place-items-center rounded-2xl bg-[#fff0e6] text-[#ff6a00]"><Icon size={28} /></span>
-                <h3 className="text-[22px] font-semibold leading-[1.3] text-[#626975]">{title}</h3>
-                <p className="mt-5 text-[14px] leading-[1.8] text-[#858993]">{text}</p>
-              </article>
-            ))}
+            {competency.items.map((item) => <ProjectCapabilityCard key={item.title} {...item} />)}
           </div>
         </div>
       </section>
@@ -72,3 +67,4 @@ export default function Principles() {
     </main>
   )
 }
+

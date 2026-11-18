@@ -34,7 +34,7 @@ export const FEATURED_WORK = [
 export const SERVICES = [
   { label: 'Digital Products', to: '/services/digital-platforms' },
   { label: 'Enterprise Software', to: '/our-work' },
-  { label: 'AI & Automation', to: '/research' },
+  { label: 'AI & Automation', to: '/research/ai-automation' },
   { label: 'Emerging Technologies', to: '/services/emerging' },
 ]
 

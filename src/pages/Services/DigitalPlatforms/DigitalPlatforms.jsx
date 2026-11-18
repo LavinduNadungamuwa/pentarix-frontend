@@ -1,5 +1,6 @@
 import { pageContainer as container } from '../../../components/pageLayout'
 import Hero from '../../../components/Hero'
+import ProjectCapabilityCard from '../../../components/ProjectCapabilityCard'
 import Cta from '../../../components/Cta'
 import RichText from '../../../components/RichText'
 import { Award } from '../../../components/Icons'
@@ -24,13 +25,7 @@ export default function DigitalPlatforms() {
         <div className={container}>
           <h2 id="expertise-title" className={heading}><RichText text={expertise.title} /></h2>
           <div className="mt-12 grid grid-cols-2 gap-7 max-sm:mt-8 max-sm:grid-cols-1">
-            {expertise.items.map(({ Icon, title, text }) => (
-              <article key={title} className="rounded-[24px] border border-[#e6e7eb] bg-white p-10 shadow-[0_2px_3px_rgba(0,0,0,.025)] max-sm:p-6">
-                <span className="mb-7 inline-grid size-14 place-items-center rounded-2xl bg-[#fff0e6] text-[#ff6a00]"><Icon size={28} /></span>
-                <h3 className="text-[clamp(21px,2vw,27px)] font-semibold leading-[1.3] text-[#242529]">{title}</h3>
-                <p className={`mt-6 max-w-[440px] ${body}`}>{text}</p>
-              </article>
-            ))}
+            {expertise.items.map((item) => <ProjectCapabilityCard key={item.title} {...item} />)}
           </div>
         </div>
       </section>
@@ -64,3 +59,4 @@ export default function DigitalPlatforms() {
     </main>
   )
 }
+

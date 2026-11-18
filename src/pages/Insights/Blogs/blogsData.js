@@ -4,7 +4,7 @@ import ragIcon from '../../../assets/icons/insights/rag.png'
 import automationIcon from '../../../assets/icons/insights/ia.png'
 
 export const hero = {
-  eyebrow: 'Knowledge & Perspectives',
+  eyebrow: 'Blogs & Articles',
   title: 'Ideas for a More\n{Intelligent Business.}',
   description: 'Perspectives on artificial intelligence, knowledge-driven systems, and business automation.',
 }

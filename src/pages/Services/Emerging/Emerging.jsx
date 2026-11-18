@@ -1,5 +1,6 @@
 import { pageContainer as container } from '../../../components/pageLayout'
 import Hero from '../../../components/Hero'
+import ProjectCapabilityCard from '../../../components/ProjectCapabilityCard'
 import Cta from '../../../components/Cta'
 import RichText from '../../../components/RichText'
 import { Check } from '../../../components/Icons'
@@ -32,16 +33,7 @@ export default function Emerging() {
           <p className={eyebrow}>{focus.eyebrow}</p>
           <h2 id="focus-title" className={`mt-5 ${heading}`}><RichText text={focus.title} /></h2>
           <div className="mt-12 grid grid-cols-2 gap-7 max-sm:mt-8 max-sm:grid-cols-1">
-            {focus.items.map(({ Icon, title, text, tags }) => (
-              <article key={title} className="flex flex-col rounded-[24px] border border-[#e6e7eb] bg-white p-10 shadow-[0_2px_3px_rgba(0,0,0,.025)] max-sm:p-6">
-                <span className="mb-8 inline-grid size-14 place-items-center rounded-2xl bg-[#fff0e6] text-[#ff6a00]"><Icon size={28} /></span>
-                <h3 className="text-[clamp(22px,2vw,28px)] font-semibold leading-[1.3] text-[#242529]">{title}</h3>
-                <p className={`mb-9 mt-5 max-w-[440px] ${body}`}>{text}</p>
-                <ul className="mt-auto flex flex-wrap gap-3" aria-label={`${title} capabilities`}>
-                  {tags.map((tag) => <li key={tag} className="rounded-full bg-[#f7f7f7] px-4 py-2 text-[12px] text-[#626975]">{tag}</li>)}
-                </ul>
-              </article>
-            ))}
+            {focus.items.map((item) => <ProjectCapabilityCard key={item.title} {...item} />)}
           </div>
         </div>
       </section>
@@ -72,3 +64,4 @@ export default function Emerging() {
     </main>
   )
 }
+

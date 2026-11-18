@@ -1,7 +1,7 @@
 import { pageContainer as container } from '../../../components/pageLayout'
 import Hero from '../../../components/Hero'
+import ProjectCapabilityCard from '../../../components/ProjectCapabilityCard'
 import Cta from '../../../components/Cta'
-import Button from '../../../components/Button'
 import RichText from '../../../components/RichText'
 import { Check } from '../../../components/Icons'
 import { hero, industries, architecture, cta, certifications } from './industrySpecificData'
@@ -17,8 +17,9 @@ export default function IndustrySpecific() {
     <main className="overflow-x-clip pt-[72px]">
       <Hero
         {...hero}
+        contentClassName="lg:[&>div:first-child]:self-start"
         aside={
-          <div className="relative mx-auto mb-6 w-full max-w-[600px]">
+          <div className="relative mx-auto mb-6 w-full max-w-[540px]">
             <img src={heroImage} alt="Team reviewing an inventory platform tailored to their business" width="1254" height="1254" fetchPriority="high" className="aspect-square w-full rounded-[24px] object-cover" />
             <div className="absolute -bottom-6 -right-6 rounded-[18px] bg-[#ff6a00] px-7 py-5 text-white shadow-lg max-sm:right-3">
               <p className="text-[42px] font-semibold leading-none">100%</p>
@@ -36,16 +37,7 @@ export default function IndustrySpecific() {
             <p className={`mx-auto mt-6 max-w-[850px] ${body}`}>{industries.text}</p>
           </div>
           <div className="mt-12 grid grid-cols-3 gap-7 max-lg:grid-cols-2 max-sm:mt-8 max-sm:grid-cols-1">
-            {industries.items.map(({ Icon, title, text, to }) => (
-              <article key={title} className="flex flex-col rounded-[24px] border border-[#e6e7eb] bg-white p-9 shadow-[0_2px_3px_rgba(0,0,0,.025)] max-sm:p-6">
-                <span className="mb-8 inline-grid size-14 place-items-center rounded-2xl bg-[#fff0e6] text-[#ff6a00]"><Icon size={28} /></span>
-                <h3 className="text-[26px] font-semibold leading-[1.3] text-[#242529]">{title}</h3>
-                <p className={`mb-8 mt-5 ${body}`}>{text}</p>
-                <div className="mt-auto border-t border-[#e6e7eb] pt-5">
-                  <Button to={to} variant="link" aria-label={`Learn more about ${title}`}>Learn More</Button>
-                </div>
-              </article>
-            ))}
+            {industries.items.map((item) => <ProjectCapabilityCard key={item.title} {...item} />)}
           </div>
         </div>
       </section>
@@ -76,3 +68,4 @@ export default function IndustrySpecific() {
     </main>
   )
 }
+

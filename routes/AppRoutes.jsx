@@ -21,6 +21,9 @@ import IndustrySpecific from '../src/pages/Services/IndustrySpecific/IndustrySpe
 import Principles from '../src/pages/Services/Principles/Principles'
 import Projects from '../src/pages/Projects/Projects'
 import Research from '../src/pages/Research/Research'
+import Innovation from '../src/pages/Research/Innovation/Innovation'
+import AiAutomation from '../src/pages/Research/AiAutomation/AiAutomation'
+import AiDriven from '../src/pages/Research/AiDriven/AiDriven'
 import Insights from '../src/pages/Insights/Insights'
 import Blogs from '../src/pages/Insights/Blogs/Blogs'
 import CaseStudies from '../src/pages/Insights/CaseStudies/CaseStudies'
@@ -75,6 +78,9 @@ export default function AppRoutes() {
       <Route path="/services/digital-products" element={<DigitalPlatforms />} />
       <Route path="/our-work"   element={<Projects />} />
       <Route path="/research"   element={<Research />} />
+      <Route path="/research/innovation" element={<Innovation />} />
+      <Route path="/research/ai-automation" element={<AiAutomation />} />
+      <Route path="/research/ai-driven-transformation" element={<AiDriven />} />
       <Route path="/insights" element={<Insights />} />
       <Route path="/insights/blogs" element={<Blogs />} />
       <Route path="/insights/case-studies" element={<CaseStudies />} />

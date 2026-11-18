@@ -12,7 +12,7 @@ const body = 'text-[16px] leading-[1.8] text-[#858993]'
 export default function About() {
   return (
     <main className="overflow-x-clip pt-[72px]">
-      <Hero variant="centered" eyebrow={hero.eyebrow} title={hero.title} description={hero.description}>
+      <Hero variant="centered" className="[&>div>div>span]:block [&>div>div>span]:text-center" eyebrow={hero.eyebrow} title={hero.title} description={hero.description}>
         <img src={hero.image} alt="Pentarix team collaborating on a digital project" width="1448" height="1086" fetchPriority="high" className="mx-auto mt-14 aspect-[4/3] w-full max-w-[800px] rounded-[28px] object-cover shadow-[0_14px_30px_rgba(0,0,0,.06)] max-sm:mt-9" />
       </Hero>
 

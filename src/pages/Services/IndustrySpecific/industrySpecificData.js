@@ -3,7 +3,7 @@ import { Layers, Factory, Cpu, Globe, Check, Database } from '../../../component
 export const hero = {
   eyebrow: 'Industry-Specific Solutions',
   title: 'Your Industry.\nYour Workflow.\nYour Solution.',
-  description: 'Purpose-built digital solutions that connect information, simplify daily tasks, and support your organization’s needs.',
+  description: "Purpose-built digital solutions that connect information, simplify daily tasks, and support your organization's needs.",
   actions: [
     { label: 'Discuss Your Requirements', to: '/contact' },
     { label: 'View All Solutions', href: '#industry-solutions', variant: 'outline-dark' },
