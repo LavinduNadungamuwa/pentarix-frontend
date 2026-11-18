@@ -178,7 +178,7 @@ export default function Home() {
           <div className="grid grid-cols-[1.15fr_1fr] grid-rows-[repeat(2,300px)] gap-6 max-sm:grid-cols-1 max-sm:grid-rows-none">
             {work.projects.map((p) => (
               <Link key={p.id} to={p.to} className={`transition-[transform,box-shadow] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(20,24,30,0.12)] hover:ring-1 hover:ring-[#ff6a00] motion-reduce:transform-none motion-reduce:transition-none relative flex min-h-[300px] items-end overflow-hidden rounded-3xl text-white ${p.className.includes('large') ? 'row-span-2' : ''}`}>
-                <div className="absolute inset-0 bg-cover bg-center" style={bg(p.image)} />
+                <div className={`absolute inset-0 bg-cover ${p.id === 'dms' || p.id === 'hris' ? 'bg-left' : 'bg-center'}`} style={bg(p.image)} />
                 <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,.85),rgba(0,0,0,.1)_60%)]" />
                 {p.badge && <span className="absolute left-5 top-5 rounded-full bg-[#ff6a00] px-3 py-1 text-[9px] font-bold tracking-[.15em]">{p.badge}</span>}
                 {p.tag && <span className="absolute left-4 top-4 rounded bg-black/70 px-2 py-1 text-[8px]">{p.tag}</span>}

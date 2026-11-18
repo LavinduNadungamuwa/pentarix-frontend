@@ -90,7 +90,7 @@ export const labs = {
   eyebrow: 'Pentarix Labs',
   title: 'The frontier of\nintelligence.',
   linkLabel: 'Read Paper',
-  linkTo: '/research',
+  linkTo: '/research/innovation',
   items: [
     { tag: 'RESEARCH_001', title: 'Neural Networks for Logistics', text: 'Optimizing last-mile delivery routes using custom-trained ML models that adapt to real-world traffic patterns.' },
     { tag: 'RESEARCH_002', title: 'Blockchain Security Layers', text: 'Developing novel consensus protocols for private enterprise blockchains ensuring maximum data integrity.' },

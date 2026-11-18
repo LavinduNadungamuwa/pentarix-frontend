@@ -103,7 +103,7 @@ export const NAV_ITEMS = [
       { label: 'Research & Innovation',    desc: 'Focus areas and UBL partnership',       Icon: Flask,     to: '/research/innovation' },
       { label: 'AI & Automation',          desc: 'AI, intelligent automation, robotics',  Icon: Cpu,       to: '/research/ai-automation' },
       { label: 'AI-Driven Transformation', desc: 'From emerging tech to opportunity',     Icon: RefreshCw, to: '/research/ai-driven-transformation' },
-      { label: 'Our Vision',               desc: 'The future is intelligent',             Icon: Eye,       to: '/company/why-choose' },
+      { label: 'Our Vision',               desc: 'The future is intelligent',             Icon: Eye,       to: '/research/our-vision' },
     ],
   },
   {

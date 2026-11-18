@@ -24,6 +24,7 @@ import Research from '../src/pages/Research/Research'
 import Innovation from '../src/pages/Research/Innovation/Innovation'
 import AiAutomation from '../src/pages/Research/AiAutomation/AiAutomation'
 import AiDriven from '../src/pages/Research/AiDriven/AiDriven'
+import OurVision from '../src/pages/Research/OurVision/OurVision'
 import Insights from '../src/pages/Insights/Insights'
 import Blogs from '../src/pages/Insights/Blogs/Blogs'
 import CaseStudies from '../src/pages/Insights/CaseStudies/CaseStudies'
@@ -81,6 +82,7 @@ export default function AppRoutes() {
       <Route path="/research/innovation" element={<Innovation />} />
       <Route path="/research/ai-automation" element={<AiAutomation />} />
       <Route path="/research/ai-driven-transformation" element={<AiDriven />} />
+      <Route path="/research/our-vision" element={<OurVision />} />
       <Route path="/insights" element={<Insights />} />
       <Route path="/insights/blogs" element={<Blogs />} />
       <Route path="/insights/case-studies" element={<CaseStudies />} />
